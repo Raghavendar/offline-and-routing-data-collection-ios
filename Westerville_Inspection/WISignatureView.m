@@ -21,7 +21,7 @@
     // holds the path representing the signature
     CGMutablePathRef    _path;          
 }
-@property (nonatomic, retain) UIImage *img;
+@property (nonatomic, strong) UIImage *img;
 @end
 
 @implementation WISignatureView
@@ -32,10 +32,8 @@
 @synthesize hasDrawing  = _hasDrawing;
 
 - (void)dealloc {
-    self.img = nil;
     UIGraphicsEndImageContext();    
     CGPathRelease(_path);
-    [super dealloc];
 }
 
 - (id)initWithFrame:(CGRect)frame

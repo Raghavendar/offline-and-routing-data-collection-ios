@@ -21,13 +21,6 @@
 @synthesize onlineBasemaps  = _onlineBasemaps;
 @synthesize localBasemaps   = _localBasemaps;
 
-- (void)dealloc
-{
-    self.onlineBasemaps = nil;
-    self.localBasemaps  = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithOnlineBasemaps:(NSArray *)onlineBasemaps
 {
@@ -48,7 +41,7 @@
             // if the extension is one of the extentions we support as a local layer, add it
             if ([extArray containsObject:[s pathExtension]]) {
                 NSString *name = [s stringByDeletingPathExtension];
-                AGSLocalTiledLayer *localLayer = [[[AGSLocalTiledLayer alloc] initWithName:name] autorelease];
+                AGSLocalTiledLayer *localLayer = [[AGSLocalTiledLayer alloc] initWithName:name];
                 [localBasemaps addObject:localLayer];
             }
         }

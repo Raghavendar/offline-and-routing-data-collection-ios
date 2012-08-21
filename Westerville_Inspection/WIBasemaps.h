@@ -23,8 +23,8 @@
 
 @interface WIBasemaps : NSObject
 
-@property (nonatomic, retain) NSArray   *onlineBasemaps;
-@property (nonatomic, retain) NSArray   *localBasemaps;
+@property (nonatomic, strong) NSArray   *onlineBasemaps;
+@property (nonatomic, strong) NSArray   *localBasemaps;
 
 - (id)initWithOnlineBasemaps:(NSArray *)onlineBasemaps;
 

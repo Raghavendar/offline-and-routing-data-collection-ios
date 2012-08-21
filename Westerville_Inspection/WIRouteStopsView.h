@@ -28,8 +28,8 @@
 
 @interface WIRouteStopsView : WIListTableView <WIListTableViewDataSource>
 
-@property (nonatomic, assign) id<WIRouteStopsViewDelegate> stopsDelegate;
-@property (nonatomic, retain) WIRoute                      *route;
+@property (nonatomic, unsafe_unretained) id<WIRouteStopsViewDelegate> stopsDelegate;
+@property (nonatomic, strong) WIRoute                      *route;
 
 - (id)initWithFrame:(CGRect)frame withRoute:(WIRoute *)route;
 

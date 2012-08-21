@@ -21,7 +21,7 @@
 
 @interface WIRouteStopsView ()
 
-@property (nonatomic, retain) UIButton      *routeButton;
+@property (nonatomic, strong) UIButton      *routeButton;
 
 - (void)routeButtonPressed:(id)sender;
 
@@ -33,13 +33,6 @@
 @synthesize route           = _route;
 @synthesize routeButton     = _routeButton;
 
-- (void)dealloc
-{
-    self.route          = nil;
-    self.routeButton    = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -129,11 +122,10 @@
     if (fromIndexPath == toIndexPath)
         return;
         
-    id itemToMove = [[self.route.stops objectAtIndex:fromIndexPath.row] retain];
+    id itemToMove = [self.route.stops objectAtIndex:fromIndexPath.row];
     [self.route.stops removeObjectAtIndex:fromIndexPath.row];
     
     [self.route.stops insertObject:itemToMove atIndex:toIndexPath.row];
-    [itemToMove release]; 
 }
 
 

@@ -26,7 +26,7 @@
 @property (nonatomic, assign) CGFloat    lineWidth;
 
 /* The color of the signature */
-@property (nonatomic, retain) UIColor   *lineColor;
+@property (nonatomic, strong) UIColor   *lineColor;
 
 /* Indicates whether or not the user has started a signature */
 @property (nonatomic, assign) BOOL      hasDrawing;

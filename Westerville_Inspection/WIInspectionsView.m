@@ -21,7 +21,7 @@
 
 @interface WIInspectionsView () 
 
-@property (nonatomic, retain) UIButton      *syncButton;
+@property (nonatomic, strong) UIButton      *syncButton;
 
 - (void)syncButtonPressed:(id)sender;
 
@@ -33,13 +33,6 @@
 @synthesize inspections         = _inspections;
 @synthesize syncButton          = _syncButton;
 
-- (void)dealloc
-{
-    self.inspections    = nil;
-    self.syncButton     = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -80,7 +73,7 @@
     WIInspectionsTableViewCell *cell = [self.tableview dequeueReusableCellWithIdentifier:defaultCellStringID];
     if(!cell)
     {
-        cell = [[[WIInspectionsTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID] autorelease];
+        cell = [[WIInspectionsTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID];
     }
     
     return cell;

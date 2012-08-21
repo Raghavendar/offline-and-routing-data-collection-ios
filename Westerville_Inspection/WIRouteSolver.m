@@ -24,9 +24,9 @@
     BOOL                    _solvingRoute;
 }
 
-@property (nonatomic, retain) AGSRouteTask              *routeTask;
-@property (nonatomic, retain) AGSRouteTaskParameters    *routeTaskParams;
-@property (nonatomic, retain) WIRoute                  *routeToSolve;
+@property (nonatomic, strong) AGSRouteTask              *routeTask;
+@property (nonatomic, strong) AGSRouteTaskParameters    *routeTaskParams;
+@property (nonatomic, strong) WIRoute                  *routeToSolve;
 
 @end
 
@@ -39,16 +39,6 @@
 @synthesize routeTask           = _routeTask;
 @synthesize delegate            = _delegate;
 
-- (void)dealloc
-{
-    self.routeTask          = nil;
-    self.routeTaskParams    = nil;
-    self.routeToSolve       = nil;
-    self.routingServiceUrl  = nil;
-    self.spatialReference   = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithSpatialReference:(AGSSpatialReference *)sr routingServiceUrl:(NSURL *)url
 {
@@ -73,7 +63,7 @@
 
 + (WIRouteSolver *)routeSolverWithSpatialReference:(AGSSpatialReference *)sr routingServiceUrl:(NSURL *)url
 {
-    WIRouteSolver *rs = [[[WIRouteSolver alloc] initWithSpatialReference:sr routingServiceUrl:url] autorelease];
+    WIRouteSolver *rs = [[WIRouteSolver alloc] initWithSpatialReference:sr routingServiceUrl:url];
     return rs;
 }
 

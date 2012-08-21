@@ -23,7 +23,7 @@
 
 @interface WIWaitingView : UIView
 
-@property (nonatomic, retain) UILabel *messageLabel;
+@property (nonatomic, strong) UILabel *messageLabel;
 
 - (id)initWithFrame:(CGRect)frame message:(NSString *)message;
 

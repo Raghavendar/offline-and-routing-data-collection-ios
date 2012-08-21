@@ -29,7 +29,7 @@
 
 @interface WIBasemapsView : UIView <WIBasemapViewDelegate>
 
-@property (nonatomic, assign) id<WIBasemapsViewDelegate>    delegate;
+@property (nonatomic, unsafe_unretained) id<WIBasemapsViewDelegate>    delegate;
 
 - (id)initWithFrame:(CGRect)frame withBasemaps:(WIBasemaps *)basemaps;
 

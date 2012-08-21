@@ -21,10 +21,10 @@
 @interface WIPolaroidView () 
 
 /* Our white, polaroid background */
-@property (nonatomic, retain) UIImageView *backgroundView;
+@property (nonatomic, strong) UIImageView *backgroundView;
 
 /* view that houses the actual image to be displayed */
-@property (nonatomic, retain) UIImageView *polaroidContentView;
+@property (nonatomic, strong) UIImageView *polaroidContentView;
 
 @end
 
@@ -33,13 +33,6 @@
 @synthesize backgroundView      = _backgroundView;
 @synthesize polaroidContentView = _polaroidContentView;
 
-- (void)dealloc
-{
-    self.polaroidContentView    = nil;
-    self.backgroundView         = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithOrigin:(CGPoint)origin withImage:(UIImage *)image
 {
@@ -50,7 +43,6 @@
     UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"polaroid.png"]];
     iv.frame = CGRectMake(origin.x, origin.y, polaroidBackgroundWidth, polaroidBackgroundHeight);
     self.backgroundView = iv;
-    [iv release];
     
     self = [super initWithContentView:self.backgroundView 
                     leftPinType:AGSPinnedViewTypePushPin  
@@ -65,7 +57,6 @@
         contentImage.hidden = YES;
         contentImage.alpha = 0.0;
         self.polaroidContentView = contentImage;
-        [contentImage release];
         
         [self.backgroundView addSubview:self.polaroidContentView];
     }

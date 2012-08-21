@@ -33,7 +33,6 @@
         xLabel.textColor = [UIColor blackColor];
         
         [self addSubview:xLabel];
-        [xLabel release];
     }
     return self;
 }

@@ -22,12 +22,6 @@
 @synthesize nameLabel       = _nameLabel;
 @synthesize editing         = _editing;
 
-- (void)dealloc
-{
-    self.nameLabel      = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -47,7 +41,6 @@
         nameLabel.backgroundColor = [UIColor whiteColor];
         nameLabel.numberOfLines = 0;
         self.nameLabel = nameLabel;
-        [nameLabel release];
         
         [self addSubview:self.nameLabel];
         

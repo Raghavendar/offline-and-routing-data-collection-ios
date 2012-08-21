@@ -50,8 +50,8 @@ CGFloat scaleForViewCount(int viewCount) {
     int     _viewCount;
     BOOL    _animatedOut;    
 }
-@property (nonatomic, retain) NSMutableArray            *viewInfoArray;
-@property (nonatomic, retain) UIPinchGestureRecognizer  *pinchGR;
+@property (nonatomic, strong) NSMutableArray            *viewInfoArray;
+@property (nonatomic, strong) UIPinchGestureRecognizer  *pinchGR;
 
 - (void)updateSubviews;
 - (CGPoint)endPointForSubviewAtIndex:(int)index;
@@ -67,12 +67,9 @@ CGFloat scaleForViewCount(int viewCount) {
 
 - (void)dealloc {
 
-    self.viewInfoArray = nil;
     [self setDelegate:nil];
     [self.pinchGR setDelegate:nil];
-    self.pinchGR = nil;
     self.activeView = nil;
-    [super dealloc];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -80,7 +77,7 @@ CGFloat scaleForViewCount(int viewCount) {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.pinchGR = [[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinched)] autorelease];
+        self.pinchGR = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinched)];
         self.pinchGR.delegate = self;
         [self addGestureRecognizer:self.pinchGR];
         

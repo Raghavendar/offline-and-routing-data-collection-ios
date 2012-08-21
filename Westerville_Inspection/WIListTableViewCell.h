@@ -24,7 +24,7 @@
 
 @interface WIListTableViewCell : UITableViewCell
 
-@property (nonatomic, retain) WIListRowView  *rowView;
+@property (nonatomic, strong) WIListRowView  *rowView;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 

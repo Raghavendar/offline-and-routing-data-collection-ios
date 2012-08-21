@@ -18,7 +18,7 @@
 
 @interface WIDirectionsTableViewCell () 
 
-@property (nonatomic, retain) UIImageView   *currentDirectionImageView;
+@property (nonatomic, strong) UIImageView   *currentDirectionImageView;
 
 @end
 
@@ -27,11 +27,6 @@
 @synthesize currentDirectionImageView   = _currentDirectionImageView;
 @synthesize isSelectedDirection         = _isSelectedDirection;
 
-- (void)dealloc
-{
-    self.currentDirectionImageView  = nil;
-    [super dealloc];
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -44,7 +39,6 @@
         iv.hidden = YES;
         
         self.currentDirectionImageView = iv;
-        [iv release];
         
         [self addSubview:self.currentDirectionImageView];
     }

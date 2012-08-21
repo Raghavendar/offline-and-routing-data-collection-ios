@@ -21,11 +21,6 @@
 
 @synthesize rowView = _rowView;
 
--(void)dealloc
-{
-    self.rowView = nil;
-    [super dealloc];
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -39,7 +34,6 @@
         WIListRowView *rv = [[WIListRowView alloc] initWithFrame:self.frame];
         rv.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.rowView = rv;
-        [rv release];
         
         self.contentView.backgroundColor = [UIColor whiteColor];
         self.backgroundColor = [UIColor whiteColor];

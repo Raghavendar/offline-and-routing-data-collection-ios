@@ -30,18 +30,18 @@
 
 @interface WIInspectionView () 
 
-@property (nonatomic, retain) WIInspection         *inspection;
-@property (nonatomic, retain) NSMutableDictionary   *originalFeatureAttributes;
+@property (nonatomic, strong) WIInspection         *inspection;
+@property (nonatomic, strong) NSMutableDictionary   *originalFeatureAttributes;
 
-@property (nonatomic, retain) UILabel               *formTitleLabel;
-@property (nonatomic, retain) UITableView           *tableView;
-@property (nonatomic, retain) WISignatureLineView  *signatureLineView;
-@property (nonatomic, retain) UIButton              *cancelButton;
-@property (nonatomic, retain) UIButton              *doneButton;
-@property (nonatomic, retain) UIButton              *resetButton;
-@property (nonatomic, retain) UIButton              *takePictureButton;
-@property (nonatomic, retain) UIPopoverController   *imagePickerPopover;
-@property (nonatomic, retain) WIPolaroidView       *polaroidView;
+@property (nonatomic, strong) UILabel               *formTitleLabel;
+@property (nonatomic, strong) UITableView           *tableView;
+@property (nonatomic, strong) WISignatureLineView  *signatureLineView;
+@property (nonatomic, strong) UIButton              *cancelButton;
+@property (nonatomic, strong) UIButton              *doneButton;
+@property (nonatomic, strong) UIButton              *resetButton;
+@property (nonatomic, strong) UIButton              *takePictureButton;
+@property (nonatomic, strong) UIPopoverController   *imagePickerPopover;
+@property (nonatomic, strong) WIPolaroidView       *polaroidView;
 
 - (void)doneButtonPressed:(id)sender;
 - (void)cancelButtonPressed:(id)sender;
@@ -86,20 +86,8 @@
 {
     [self.inspection.signatureView removeFromSuperview];
     
-    self.inspection                 = nil;
-    self.originalFeatureAttributes  = nil;
 
-    self.formTitleLabel             = nil;
-    self.tableView                  = nil;
-    self.signatureLineView          = nil;
-    self.cancelButton               = nil;
-    self.doneButton                 = nil;
-    self.resetButton                = nil;
-    self.takePictureButton          = nil;
-    self.imagePickerPopover         = nil;
-    self.polaroidView               = nil;
     
-    [super dealloc];
 }
 
 
@@ -110,10 +98,9 @@
     {    
         WIInspection *i = [[WIInspection alloc] initWithFeatureToInspect:feature inspectionLayer:inspectionLayer];
         self.inspection = i;
-        [i release];
         
         //save original attributes in case they decide to cancel
-        self.originalFeatureAttributes = [[self.inspection.popup.graphic.attributes mutableCopy] autorelease];
+        self.originalFeatureAttributes = [self.inspection.popup.graphic.attributes mutableCopy];
          
         // setup our custom look and feel
         [self setupUxForFrame:frame];
@@ -131,7 +118,7 @@
         self.inspection = inspection;
         
         //save original attributes in case they decide to cancel
-        self.originalFeatureAttributes = [[self.inspection.popup.graphic.attributes mutableCopy] autorelease];
+        self.originalFeatureAttributes = [self.inspection.popup.graphic.attributes mutableCopy];
         
         // setup our custom look and feel
         [self setupUxForFrame:frame];
@@ -154,7 +141,6 @@
     formTitleLabel.text = @"Inspection Form";
     
     self.formTitleLabel = formTitleLabel;
-    [formTitleLabel release];
     
     //Tableview
     CGFloat tableYOrigin = 2*titleMargin + titleHeight;
@@ -168,7 +154,6 @@
     tv.separatorStyle = UITableViewCellSeparatorStyleNone;
     tv.backgroundColor = [UIColor clearColor];
     self.tableView = tv;
-    [tv release];
     
     //Signature View
     CGRect sigRect = CGRectMake(tableMargin, tableYOrigin + tableHeight + 5, tvRect.size.width, 190);
@@ -177,7 +162,6 @@
     //Line for Signature
     WISignatureLineView *lineView = [[WISignatureLineView alloc] initWithFrame:sigRect];
     self.signatureLineView = lineView;
-    [lineView release];
     
     //Buttons
     CGFloat margin          = 5.0f;
@@ -238,7 +222,7 @@
     WIInspectionFormCell *cell = (WIInspectionFormCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell)
     {
-        cell = [[[WIInspectionFormCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[WIInspectionFormCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     AGSPopupFieldInfo *fi = [self.inspection.editableFieldInfos objectAtIndex:indexPath.row];
@@ -288,8 +272,6 @@
                                                       rightPinType:AGSPinnedViewTypeNone];
     
     [self addSubview:pv];
-    [pv release];
-    [dpv release];
     
     //disable rest of form while picking a domain
     [self enableFormElements:NO];
@@ -447,11 +429,11 @@
     if (bIsCameraAvailable)
     {
         //we have a camera, so let the user pick between that and the saved photo roll
-        UIActionSheet *actionSheet = [[[UIActionSheet alloc] initWithTitle:@""
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
                                                                  delegate:self 
                                                          cancelButtonTitle:nil 
                                                     destructiveButtonTitle:nil
-                                                        otherButtonTitles:NSLocalizedString(@"Take Photo", nil), NSLocalizedString(@"Choose Existing Photo", nil), nil] autorelease];
+                                                        otherButtonTitles:NSLocalizedString(@"Take Photo", nil), NSLocalizedString(@"Choose Existing Photo", nil), nil];
         
         actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
         actionSheet.delegate = self;
@@ -507,7 +489,6 @@
         // create our polaroid view, only if it didn't already exist
         WIPolaroidView *pv = [[WIPolaroidView alloc] initWithOrigin:CGPointMake(-365, 340) withImage:image];
         self.polaroidView = pv;
-        [pv release];  
     }
     
     [self addSubview:self.polaroidView];
@@ -518,13 +499,13 @@
 
 - (void)showImagePickerWithType:(UIImagePickerControllerSourceType)sourceType
 {
-    UIImagePickerController *imagePicker = [[[UIImagePickerController alloc] init] autorelease];
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = sourceType;
     imagePicker.allowsEditing = YES;
     imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:imagePicker.sourceType];
     imagePicker.delegate = self;
     
-    self.imagePickerPopover = [[[UIPopoverController alloc] initWithContentViewController:imagePicker] autorelease];
+    self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
     self.imagePickerPopover.delegate = self;
     [self.imagePickerPopover presentPopoverFromRect:self.takePictureButton.frame 
                                              inView:self 

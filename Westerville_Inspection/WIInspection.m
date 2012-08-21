@@ -22,7 +22,7 @@
 
 @interface WIInspection () 
 
-@property (nonatomic, retain, readwrite) AGSPopup   *feature;
+@property (nonatomic, strong, readwrite) AGSPopup   *feature;
 
 @end
 
@@ -41,23 +41,6 @@
 @synthesize attributeUtility    = _attributeUtility;
 @synthesize editableFieldInfos  = _editableFieldInfos;
 
-- (void)dealloc
-{
-    self.popup              = nil;
-    self.feature            = nil;
-    
-    self.signatureView      = nil;
-    
-    self.images             = nil;
-    
-    self.dateSynced         = nil;
-    self.dateModified       = nil;
-    
-    self.attributeUtility   = nil;
-    self.editableFieldInfos = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFeatureToInspect:(AGSPopup *)feature inspectionLayer:(AGSFeatureLayer *)inspectionLayer;
 {
@@ -94,7 +77,7 @@
         self.popup.allowEditGeometry = NO;
         
         //helps us create strings for each of the fields
-        self.attributeUtility = [[[WIAttributeUtility alloc] initWithPopup:self.popup] autorelease];
+        self.attributeUtility = [[WIAttributeUtility alloc] initWithPopup:self.popup];
         
         //create editable field infos array
         self.editableFieldInfos = [NSMutableArray arrayWithCapacity:self.popup.popupInfo.fieldInfos.count];
@@ -159,7 +142,6 @@
         WISignatureView *sigView = [[WISignatureView alloc] initWithFrame:CGRectZero];
         sigView.backgroundColor = [UIColor clearColor];
         self.signatureView = sigView;
-        [sigView release];
     }
     return _signatureView;
 }

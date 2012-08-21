@@ -20,7 +20,7 @@
 
 @interface WIIndexCardTableView () 
 
-@property (nonatomic, retain) UITableView   *tableview;
+@property (nonatomic, strong) UITableView   *tableview;
 
 @end
 
@@ -31,11 +31,6 @@
 
 @synthesize tableview           = _tableview;
 
-- (void)dealloc
-{
-    self.tableview  = nil;
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame datasource:(id<WIIndexCardTableViewDataSource>)datasource
 {
@@ -50,7 +45,6 @@
                 
         WIIndexCardRowView *titleView = [[WIIndexCardRowView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, titleRowHeight) isTitleRow:YES];        
         [self addSubview:titleView];
-        [titleView release];
         
         //update frame of tableview
         tableViewFrame.origin.y = titleRowHeight;
@@ -61,7 +55,6 @@
         tableview.dataSource = self;
         tableview.delegate = self;
         self.tableview = tableview;
-        [tableview release];
         
         [self addSubview:tableview];
     }
@@ -107,7 +100,7 @@
     WIIndexCardTableViewCell *cell = [self.tableview dequeueReusableCellWithIdentifier:defaultCellStringID];
     if(!cell)
     {
-        cell = [[[WIIndexCardTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID isTitle:NO] autorelease];
+        cell = [[WIIndexCardTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID isTitle:NO];
     }
     
     return cell;

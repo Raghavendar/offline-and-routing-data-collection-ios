@@ -18,8 +18,8 @@
 
 @interface WIInspectionsTableViewCell () 
 
-@property (nonatomic, retain) UILabel           *dateLabel;
-@property (nonatomic, retain) NSDateFormatter   *dateFormatter;
+@property (nonatomic, strong) UILabel           *dateLabel;
+@property (nonatomic, strong) NSDateFormatter   *dateFormatter;
 
 @end
 
@@ -30,14 +30,6 @@
 @synthesize dateLabel           = _dateLabel;
 @synthesize dateFormatter       = _dateFormatter;
 
-- (void)dealloc
-{
-    self.dateLabel      = nil;
-    self.date           = nil;
-    self.dateFormatter  = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -63,14 +55,12 @@
         dateLabel.backgroundColor = [UIColor clearColor];
         dateLabel.numberOfLines = 0;
         self.dateLabel = dateLabel;
-        [dateLabel release];
         
         [self addSubview:self.dateLabel];
         
         NSDateFormatter *df = [[NSDateFormatter alloc] init];
         [df setDateFormat:@"M/d/yy H:m"];
         self.dateFormatter = df;
-        [df release];
     }
     
     return self;
@@ -92,8 +82,7 @@
 
 - (void)setDate:(NSDate *)date
 {
-    [_date autorelease];
-    _date = [date retain];
+    _date = date;
     
     self.dateLabel.text = [NSString stringWithFormat:@"%@: %@", (self.syncedInspection) ? @"Synced" : @"Modified", [self.dateFormatter stringFromDate:self.date]];
 }

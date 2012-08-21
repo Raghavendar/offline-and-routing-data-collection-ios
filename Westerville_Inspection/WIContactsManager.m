@@ -28,8 +28,8 @@ void somethingChangedInAddressBook ( ABAddressBookRef addressBook, CFDictionaryR
     ABAddressBookRef    _addressBook;
 }
 
-@property (nonatomic, retain, readwrite) NSArray *allContacts;
-@property (nonatomic, retain, readwrite) NSArray *allContactsWithAddresses;
+@property (nonatomic, strong, readwrite) NSArray *allContacts;
+@property (nonatomic, strong, readwrite) NSArray *allContactsWithAddresses;
 
 - (void)initializeAddressBook;
 - (void)clearAddressBook;
@@ -45,7 +45,7 @@ void somethingChangedInAddressBook (
                                     )
 {
     //call back into Objective-C method
-    [(id)callbackSelf clearAddressBook];
+    [(__bridge id)callbackSelf clearAddressBook];
 }
 
 
@@ -68,7 +68,7 @@ void somethingChangedInAddressBook (
         {
             instance = [[WIContactsManager alloc] init];
             [instance initializeAddressBook];
-            callbackSelf = instance;
+            callbackSelf = (   void *)CFBridgingRetain(instance);
         }
     }
     
@@ -89,7 +89,7 @@ void somethingChangedInAddressBook (
         ABAddressBookRegisterExternalChangeCallback(
                                                     _addressBook,                   //addressBook in question
                                                     somethingChangedInAddressBook,  //callback method when something changes
-                                                    self);                          //object to pass into callback, in this case need a referenc to self
+                                                    (__bridge void *)(self));                          //object to pass into callback, in this case need a referenc to self
     }
 }
 
@@ -116,11 +116,10 @@ void somethingChangedInAddressBook (
         {
             ABRecordRef source = ABAddressBookCopyDefaultSource(_addressBook);
             ABPersonSortOrdering ordering = ABPersonGetSortOrdering();
-            NSArray *contacts = (NSArray*)ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering(_addressBook, source, ordering);
+            NSArray *contacts = (NSArray*)CFBridgingRelease(ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering(_addressBook, source, ordering));
             self.allContacts = contacts;
             
             CFRelease(source);
-            [contacts release];
         }
     }
     
@@ -141,13 +140,13 @@ void somethingChangedInAddressBook (
             int numContacts = self.allContacts.count;        
             for (int i = 0; i < numContacts; i++) {
                 //grab the person record from list of contacts
-                ABRecordRef person = [self.allContacts objectAtIndex:i];
+                ABRecordRef person = (__bridge ABRecordRef)([self.allContacts objectAtIndex:i]);
                                 
                 //check to see if person has at least one address. If so, add to list
                 ABMutableMultiValueRef addressMulti = ABRecordCopyValue(person, kABPersonAddressProperty);
                 
                 if (ABMultiValueGetCount(addressMulti) > 0) {
-                    [contactsWithAddresses addObject:(id)person];
+                    [contactsWithAddresses addObject:(   id)CFBridgingRelease(person)];
                 }
                 
                 CFRelease(addressMulti);
@@ -164,12 +163,12 @@ void somethingChangedInAddressBook (
 {
     ABPersonCompositeNameFormat nameFormat = ABPersonGetCompositeNameFormat();
     
-    NSString *firstName = [(NSString *)ABRecordCopyValue(record, kABPersonFirstNameProperty) autorelease];
+    NSString *firstName = (NSString *)CFBridgingRelease(ABRecordCopyValue(record, kABPersonFirstNameProperty));
     if (!firstName) {
         firstName = @"";
     }
     
-    NSString *lastName = [(NSString *)ABRecordCopyValue(record, kABPersonLastNameProperty) autorelease];
+    NSString *lastName = (NSString *)CFBridgingRelease(ABRecordCopyValue(record, kABPersonLastNameProperty));
     if(!lastName)
     {
         lastName = @"";
@@ -236,28 +235,6 @@ void somethingChangedInAddressBook (
 }
 
 //don't alter retain count
-- (id)retain
-{
-    return self;
-}
 
-
-//make sure user can't release sharedContacts
-- (oneway void)release
-{
-    // do nothing
-}  
-
-//autorelease shouldn't do anything
-- (id)autorelease
-{
-    return self;
-}
-
-//just a protection mechanism from contacts from ever being deallocated
-- (NSUInteger)retainCount
-{
-    return NSUIntegerMax; // Random high number!
-}
 
 @end

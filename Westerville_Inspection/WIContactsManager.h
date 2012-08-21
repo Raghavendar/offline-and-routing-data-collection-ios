@@ -23,8 +23,8 @@
 
 @interface WIContactsManager : NSObject
 
-@property (nonatomic, retain, readonly) NSArray *allContacts;
-@property (nonatomic, retain, readonly) NSArray *allContactsWithAddresses;
+@property (nonatomic, strong, readonly) NSArray *allContacts;
+@property (nonatomic, strong, readonly) NSArray *allContactsWithAddresses;
 
 //class method that returns a singleton object for 
 //working with a device's contact list

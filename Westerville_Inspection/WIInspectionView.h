@@ -30,7 +30,7 @@
                                         WIDomainPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
                                         UIActionSheetDelegate, UIPopoverControllerDelegate>
 
-@property (nonatomic, assign) id<WIInspectionViewDelegate>     delegate;
+@property (nonatomic, unsafe_unretained) id<WIInspectionViewDelegate>     delegate;
 
 //Starting a new inspection
 - (id)initWithFrame:(CGRect)frame withFeatureToInspect:(AGSPopup *)feature inspectionLayer:(AGSFeatureLayer *)inspectionLayer;

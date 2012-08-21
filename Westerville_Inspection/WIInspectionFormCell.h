@@ -21,7 +21,7 @@
  */
 @interface WIInspectionFormCell : UITableViewCell
 
-@property (nonatomic, retain) UILabel       *fieldName;
-@property (nonatomic, retain) UITextField   *fieldResult;
+@property (nonatomic, strong) UILabel       *fieldName;
+@property (nonatomic, strong) UITextField   *fieldResult;
 
 @end

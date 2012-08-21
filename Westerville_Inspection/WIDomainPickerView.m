@@ -22,15 +22,15 @@
 
 @interface WIDomainPickerView ()
 
-@property (nonatomic, retain) WIInspection                 *inspection;
+@property (nonatomic, strong) WIInspection                 *inspection;
 
 //editing subtype field
-@property (nonatomic, retain) NSMutableArray                *templates;
-@property (nonatomic, retain) NSMutableArray                *templateTypeValues;
-@property (nonatomic, retain, readwrite) AGSFeatureTemplate *templateChosen;
+@property (nonatomic, strong) NSMutableArray                *templates;
+@property (nonatomic, strong) NSMutableArray                *templateTypeValues;
+@property (nonatomic, strong, readwrite) AGSFeatureTemplate *templateChosen;
 
-@property (nonatomic, retain) WIIndexCardTableView         *tableView;
-@property (nonatomic, retain) UIButton                      *doneButton;
+@property (nonatomic, strong) WIIndexCardTableView         *tableView;
+@property (nonatomic, strong) UIButton                      *doneButton;
 
 - (AGSDomain *)getDomain;
 - (void)doneButtonPressed:(id)sender;
@@ -51,21 +51,6 @@
 @synthesize doneButton          = _doneButton;
 @synthesize tableView           = _tableView;
 
-- (void)dealloc
-{
-    self.inspection         = nil;
-    self.fieldOfInterest    = nil;
-    self.selectedValue      = nil;
-    
-    self.templates          = nil;
-    self.templateTypeValues = nil;
-    self.templateChosen     = nil;
-    
-    self.doneButton         = nil;
-    self.tableView          = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame withInspection:(WIInspection *)inspection fieldOfInterest:(AGSPopupFieldInfo *)fieldInfo
 {
@@ -132,7 +117,6 @@
         WIIndexCardTableView   *tv = [[WIIndexCardTableView alloc] initWithFrame:self.bounds datasource:self];
         tv.indexCardDelegate = self;
         self.tableView = tv;
-        [tv release];
                 
         //Done Button
         CGFloat margin = 5.0f;

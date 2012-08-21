@@ -27,7 +27,7 @@
 
 @interface WIFeatureView : WIListTableView <WIListTableViewDataSource>
 
-@property (nonatomic, assign) id<WIFeatureViewDelegate> featureDelegate;
+@property (nonatomic, unsafe_unretained) id<WIFeatureViewDelegate> featureDelegate;
 
 - (id)initWithFrame:(CGRect)frame withPopup:(AGSPopup *)popup;
 - (void)inspectButtonPressed:(id)sender;

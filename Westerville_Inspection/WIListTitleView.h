@@ -22,7 +22,7 @@
 
 @interface WIListTitleView : WIListRowView
 
-@property (nonatomic, retain) UILabel   *titleLabel;
+@property (nonatomic, strong) UILabel   *titleLabel;
 
 - (id)initWithFrame:(CGRect)frame title:(NSString *)title;
 

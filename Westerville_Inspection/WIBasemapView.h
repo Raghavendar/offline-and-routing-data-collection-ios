@@ -25,7 +25,7 @@
 
 @interface WIBasemapView : UIImageView <AGSPortalItemDelegate>
 
-@property (nonatomic, assign) id<WIBasemapViewDelegate>    delegate;
+@property (nonatomic, unsafe_unretained) id<WIBasemapViewDelegate>    delegate;
 
 - (id)initWithFrame:(CGRect)frame withPortalItem:(AGSPortalItem *)pi;
 - (id)initWithFrame:(CGRect)frame withLocalLayer:(AGSLocalTiledLayer*)localLayer;

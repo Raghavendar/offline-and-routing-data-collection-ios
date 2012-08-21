@@ -20,11 +20,6 @@
 
 @synthesize contactName = _contactName;
 
-- (void)dealloc
-{
-    self.contactName    = nil;
-    [super dealloc];
-}
 
 - (id)initWithLocation:(AGSPoint *)location contactName:(NSString *)name;
 {
@@ -44,7 +39,7 @@
 + (WIContactGraphic *)contactGraphicWithLocation:(AGSPoint *)location contactName:(NSString *)name
 {
     WIContactGraphic *cg = [[WIContactGraphic alloc] initWithLocation:location contactName:name];
-    return [cg autorelease];
+    return cg;
 }
 
 @end

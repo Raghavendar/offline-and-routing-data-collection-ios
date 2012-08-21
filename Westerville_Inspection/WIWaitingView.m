@@ -19,7 +19,7 @@
 
 @interface WIWaitingView () 
 
-@property (nonatomic, retain) UIActivityIndicatorView *indicator;
+@property (nonatomic, strong) UIActivityIndicatorView *indicator;
 
 @end
 
@@ -28,13 +28,6 @@
 @synthesize messageLabel    = _messageLabel;
 @synthesize indicator       = _indicator;
 
-- (void)dealloc
-{
-    self.messageLabel   = nil;
-    self.indicator      = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -60,7 +53,6 @@
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         label.text = message;
         self.messageLabel = label;
-        [label release];
         
         UIActivityIndicatorView *iv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         CGFloat activityIndicatorWidth = 37.0f;
@@ -68,7 +60,6 @@
         
         self.indicator = iv;
         [self.indicator startAnimating];
-        [iv release];
         
         [self addSubview:self.messageLabel];
         [self addSubview:self.indicator];

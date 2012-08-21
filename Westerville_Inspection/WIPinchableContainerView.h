@@ -20,8 +20,8 @@
 
 @interface WIPinchableContainerView : UIView <UIGestureRecognizerDelegate>
 
-@property (nonatomic, assign) id<WIPinchableContainerViewDelegate> delegate;
-@property (nonatomic, assign) UIView *activeView;
+@property (nonatomic, unsafe_unretained) id<WIPinchableContainerViewDelegate> delegate;
+@property (nonatomic, unsafe_unretained) UIView *activeView;
 
 - (void)addListView:(UIView*)listView;
 - (void)removeListView:(UIView*)listView;

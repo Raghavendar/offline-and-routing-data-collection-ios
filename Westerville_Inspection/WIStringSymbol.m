@@ -23,7 +23,7 @@
     WIStringSymbol *sls = [[WIStringSymbol alloc] initWithColor:[UIColor colorWithRed:(186.0/255.0) green:0 blue:0 alpha:1.0]
                                                             width:4.0f];
     
-    return [sls autorelease];
+    return sls;
 }
 
 

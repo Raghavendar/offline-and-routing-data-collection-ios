@@ -33,21 +33,21 @@ decoding templated strings, etc.
 /* Object to pull information out of the popup for display purposes */
 @interface WIAttributeUtility : NSObject 
 
-@property (nonatomic, retain) AGSPopup *popup;
-@property (nonatomic, retain) AGSFeatureType *featureType;
-@property (nonatomic, retain) AGSFeatureLayer *featureLayer;
+@property (nonatomic, strong) AGSPopup *popup;
+@property (nonatomic, strong) AGSFeatureType *featureType;
+@property (nonatomic, strong) AGSFeatureLayer *featureLayer;
 
 /*dictionary of actual attribute names to the labels that should be
 presented  */
-@property (nonatomic, retain) NSDictionary *fieldNamesDictionary;
+@property (nonatomic, strong) NSDictionary *fieldNamesDictionary;
 
 /*dictionary of attribute names to the AGSField that defines the actual
 field */
-@property (nonatomic, retain) NSDictionary *fieldDictionary;
+@property (nonatomic, strong) NSDictionary *fieldDictionary;
 
 /*dictionary of AGSFields to the the corresponding FieldInfo in the
  popupInfo */
-@property (nonatomic, retain) NSDictionary *fieldInfosDictionary;
+@property (nonatomic, strong) NSDictionary *fieldInfosDictionary;
 
 //default initializer
 - (id)initWithPopup:(AGSPopup *)popup;

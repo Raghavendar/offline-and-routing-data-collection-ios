@@ -24,8 +24,8 @@
 
 @interface WIRoute : NSObject
 
-@property (nonatomic, retain, readonly) NSMutableArray  *stops;
-@property (nonatomic, retain) AGSDirectionSet           *directions;
+@property (nonatomic, strong, readonly) NSMutableArray  *stops;
+@property (nonatomic, strong) AGSDirectionSet           *directions;
  
 - (void)addStop:(AGSStopGraphic *)location;
 - (void)removeStop:(AGSStopGraphic *)location;

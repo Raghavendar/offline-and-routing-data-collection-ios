@@ -19,7 +19,7 @@
 
 @interface WIListTitleViewCell ()
 
-@property (nonatomic, retain) WIListTitleView *titleView;
+@property (nonatomic, strong) WIListTitleView *titleView;
 
 @end
 
@@ -27,11 +27,6 @@
 
 @synthesize titleView = _titleView;
 
-- (void)dealloc
-{
-    self.titleView = nil;
-    [super dealloc];
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier withTitle:(NSString *)title
 {
@@ -44,7 +39,6 @@
         
         WIListTitleView *ltv = [[WIListTitleView alloc] initWithFrame:self.frame title:title];
         self.titleView = ltv;
-        [ltv release];
         
         self.contentView.backgroundColor = [UIColor whiteColor];
         self.backgroundColor = [UIColor whiteColor];

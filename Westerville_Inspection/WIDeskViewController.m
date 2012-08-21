@@ -68,57 +68,57 @@
 
 /*** User Experience, UI ***/
 //Map Related
-@property (nonatomic, retain) WIPinnedView             *mapPinnedView;
-@property (nonatomic, retain) AGSMapView                *mapView;
-@property (nonatomic, retain) UIView                    *toggleBasemapsSwipeView;
-@property (nonatomic, retain) UIImageView               *offlineTapeView;
+@property (nonatomic, strong) WIPinnedView             *mapPinnedView;
+@property (nonatomic, strong) AGSMapView                *mapView;
+@property (nonatomic, strong) UIView                    *toggleBasemapsSwipeView;
+@property (nonatomic, strong) UIImageView               *offlineTapeView;
 
 //Extra Map Layers
-@property (nonatomic, retain) AGSGraphicsLayer          *contactsLayer;
-@property (nonatomic, retain) AGSGraphicsLayer          *stopsLayer;
-@property (nonatomic, retain) AGSGraphicsLayer          *routeLayer;
-@property (nonatomic, retain) NSMutableDictionary       *offlineFeatureLayers;
+@property (nonatomic, strong) AGSGraphicsLayer          *contactsLayer;
+@property (nonatomic, strong) AGSGraphicsLayer          *stopsLayer;
+@property (nonatomic, strong) AGSGraphicsLayer          *routeLayer;
+@property (nonatomic, strong) NSMutableDictionary       *offlineFeatureLayers;
 
 //Side Panel Views
-@property (nonatomic, retain) WIPinnedView             *pinchPinnedView;
-@property (nonatomic, retain) WIPinchableContainerView *pinchView;
-@property (nonatomic, retain) WIContactsView           *contactsView;
-@property (nonatomic, retain) WIRouteStopsView         *stopsView;
-@property (nonatomic, retain) WIDirectionsView         *directionsView;
-@property (nonatomic, retain) WIInspectionsView        *inspectionsView;
-@property (nonatomic, retain) WIFeatureView            *featureView;
+@property (nonatomic, strong) WIPinnedView             *pinchPinnedView;
+@property (nonatomic, strong) WIPinchableContainerView *pinchView;
+@property (nonatomic, strong) WIContactsView           *contactsView;
+@property (nonatomic, strong) WIRouteStopsView         *stopsView;
+@property (nonatomic, strong) WIDirectionsView         *directionsView;
+@property (nonatomic, strong) WIInspectionsView        *inspectionsView;
+@property (nonatomic, strong) WIFeatureView            *featureView;
 
-@property (nonatomic, retain) WIPinnedView             *inpsectionPinnedView;
-@property (nonatomic, retain) WIInspectionView         *inspectionView;
+@property (nonatomic, strong) WIPinnedView             *inpsectionPinnedView;
+@property (nonatomic, strong) WIInspectionView         *inspectionView;
 
 // dimmer
-@property (nonatomic, retain) UIView                    *dimmerView;
+@property (nonatomic, strong) UIView                    *dimmerView;
 
-@property (nonatomic, retain) WIWaitingView            *waitingView;
+@property (nonatomic, strong) WIWaitingView            *waitingView;
 
 //graphics, etc.
-@property (nonatomic, retain) AGSGraphic                *routeGraphic;
-@property (nonatomic, retain) AGSGraphic                *turnHighlightGraphic;
+@property (nonatomic, strong) AGSGraphic                *routeGraphic;
+@property (nonatomic, strong) AGSGraphic                *turnHighlightGraphic;
 
 /*** Model Objects ***/
 
 //portal stuff
-@property (nonatomic, retain) AGSPortal                 *portal;
-@property (nonatomic, retain) AGSWebMap                 *webMap;
+@property (nonatomic, strong) AGSPortal                 *portal;
+@property (nonatomic, strong) AGSWebMap                 *webMap;
 
 //Routing
-@property (nonatomic, retain) WIRouteSolver            *routeSolver;
-@property (nonatomic, retain) WIRoute                  *route;
+@property (nonatomic, strong) WIRouteSolver            *routeSolver;
+@property (nonatomic, strong) WIRoute                  *route;
 
 //Basemaps
-@property (nonatomic, retain) WIBasemaps               *basemaps;
-@property (nonatomic, retain) AGSWebMap                 *baseMap;
-@property (nonatomic, retain) AGSEnvelope               *savedEnvelope;
+@property (nonatomic, strong) WIBasemaps               *basemaps;
+@property (nonatomic, strong) AGSWebMap                 *baseMap;
+@property (nonatomic, strong) AGSEnvelope               *savedEnvelope;
 
 //Inspections
-@property (nonatomic, retain) AGSFeatureLayer           *inspectionLayer;
-@property (nonatomic, retain) WIInspections            *inspections;
-@property (nonatomic, retain) AGSPopup                  *currentFeaturePopup;
+@property (nonatomic, strong) AGSFeatureLayer           *inspectionLayer;
+@property (nonatomic, strong) WIInspections            *inspections;
+@property (nonatomic, strong) AGSPopup                  *currentFeaturePopup;
 
 /* Zoom the map to a particular geometry */
 - (void)zoomToGeometry:(AGSGeometry *)geometry;
@@ -189,47 +189,16 @@
         _observingReachability = NO;
     }
     
-    self.mapPinnedView              = nil;
-    self.mapView                    = nil;
-    self.toggleBasemapsSwipeView    = nil;
-    self.offlineTapeView            = nil;
     
-    self.contactsLayer              = nil;
-    self.routeLayer                 = nil;
-    self.stopsLayer                 = nil;
-    self.offlineFeatureLayers       = nil;
 
     [self.pinchView setDelegate:nil];
-    self.pinchView                  = nil;
-    self.pinchPinnedView            = nil;
-    self.dimmerView                 = nil;
-    self.waitingView                = nil;
     
-    self.contactsView               = nil;
-    self.stopsView                  = nil;
-    self.directionsView             = nil;
-    self.inspectionsView            = nil;
-    self.featureView                = nil;
     
-    self.inpsectionPinnedView       = nil;
-    self.inspectionView             = nil;
     
-    self.routeGraphic               = nil;
-    self.turnHighlightGraphic       = nil;
     
-    self.portal                     = nil;
-    self.webMap                     = nil;
-    self.baseMap                    = nil;
-    self.basemaps                   = nil;
-    self.savedEnvelope              = nil;
     
-    self.inspections                = nil;
-    self.inspectionLayer            = nil;
     
-    self.routeSolver                = nil;
-    self.route                      = nil;
             
-    [super dealloc];
 }
 
 //This application doesn't use any nibs. All views are created programatically, including the view controller's
@@ -263,7 +232,6 @@
     mapView.calloutDelegate = self;
     
     self.mapView = mapView;
-    [mapView release];
             
     // main pinned view that houses the map control
     WIPinnedView *mapPinnedView = [[WIPinnedView alloc] initWithContentView:self.mapView 
@@ -271,7 +239,6 @@
                                                                rightPinType:AGSPinnedViewTypeThumbtack];
     
     self.mapPinnedView = mapPinnedView;
-    [mapPinnedView release];
     
     //will reside on top of map view... allows a user to swipe up and down on top of map
     //to reveal/hide basemaps
@@ -281,23 +248,20 @@
     downRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
     downRecognizer.delegate = self;
     [swipeView addGestureRecognizer:downRecognizer];
-    [downRecognizer release];
     
     UISwipeGestureRecognizer *upRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(toggleShowingBasemaps)];
     upRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
     upRecognizer.delegate = self;
     [swipeView addGestureRecognizer:upRecognizer];
-    [upRecognizer release];
     
     self.toggleBasemapsSwipeView = swipeView;
-    [swipeView release];
     
     [self.mapPinnedView addSubview:self.toggleBasemapsSwipeView];
     
     [v addSubview:self.mapPinnedView];
         
     /* Dimmer View - visible when the pinch view animates to show other list views */
-    self.dimmerView = [[[UIView alloc] initWithFrame:v.bounds] autorelease];
+    self.dimmerView = [[UIView alloc] initWithFrame:v.bounds];
     self.dimmerView.alpha = 0.0f;
     self.dimmerView.backgroundColor = [UIColor blackColor];
     self.dimmerView.userInteractionEnabled = NO;
@@ -308,12 +272,12 @@
     /* Pinchable View - stack of lists that can be pinched to show the views */
     CGRect pinchViewRect = CGRectMake(10, topYMargin, foldersWidth, landscapeHeight - 2*topYMargin);
     _origPinchFrame = pinchViewRect;
-    self.pinchView = [[[WIPinchableContainerView alloc] initWithFrame:pinchViewRect] autorelease];
+    self.pinchView = [[WIPinchableContainerView alloc] initWithFrame:pinchViewRect];
     self.pinchView.delegate = self;
     /* Pinned View */
-    self.pinchPinnedView = [[[WIPinnedView alloc] initWithContentView:self.pinchView 
+    self.pinchPinnedView = [[WIPinnedView alloc] initWithContentView:self.pinchView 
                                                            leftPinType:AGSPinnedViewTypePushPin 
-                                                          rightPinType:AGSPinnedViewTypeNone] autorelease];
+                                                          rightPinType:AGSPinnedViewTypeNone];
     self.pinchPinnedView.leftPinXOffset = foldersWidth/2;
     self.pinchPinnedView.leftPinYOffset = 3.0f;
     self.pinchPinnedView.useShadow = NO;
@@ -324,14 +288,12 @@
     iv.delegate = self;
     iv.inspectionsDelegate = self;
     self.inspectionsView = iv;
-    [iv release];
     [self.pinchView addListView:self.inspectionsView];
     
     WIRouteStopsView *rsv = [[WIRouteStopsView alloc] initWithFrame:self.pinchView.bounds withRoute:self.route];
     rsv.delegate = self;
     rsv.stopsDelegate = self;
     self.stopsView = rsv;
-    [rsv release];
     
     [self.pinchView addListView:self.stopsView];
 
@@ -341,12 +303,10 @@
     cv.delegate = self;
     cv.contactDelegate = self;
     self.contactsView = cv;
-    [cv release];
     
     [self.pinchView addListView:self.contactsView]; 
 
     self.view = v;
-    [v release];
 }
 
 - (void)viewDidLoad
@@ -366,8 +326,6 @@
     newPortal.delegate = self;
     self.portal = newPortal;
     
-    [cred release];
-    [newPortal release];
     
     /*Configure and check for reachability 
      We want to be notified whenever we lose connection so we don't try to 
@@ -460,7 +418,6 @@
         UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"offline_tape.png"]];
         iv.frame = CGRectMake(865, 645, 197, 143);
         self.offlineTapeView = iv;
-        [iv release];
     }
     
     return _offlineTapeView;
@@ -504,13 +461,11 @@
     //Create basemaps model object
     WIBasemaps *basemaps = [[WIBasemaps alloc] initWithOnlineBasemaps:onlineBasemapArray];
     self.basemaps = basemaps;
-    [basemaps release];
     
     //Put basemap view right behind map
     WIBasemapsView *basemapsView = [[WIBasemapsView alloc] initWithFrame:CGRectMake(self.mapPinnedView.frame.origin.x, self.mapPinnedView.frame.origin.y, 659, 685) withBasemaps:self.basemaps];
     basemapsView.delegate = self;
     [self.view insertSubview:basemapsView belowSubview:self.mapPinnedView];
-    [basemapsView release];
 }
 
 #pragma mark -
@@ -625,7 +580,7 @@
     mapView.callout.highlight = [[UIColor whiteColor] colorWithAlphaComponent:0.0];
     mapView.callout.margin = CGSizeZero;
     
-    WICustomCalloutView *calloutView = [[[WIArrowCalloutView alloc] initWithGraphic:graphic] autorelease];
+    WICustomCalloutView *calloutView = [[WIArrowCalloutView alloc] initWithGraphic:graphic];
     calloutView.delegate = self;
     mapView.callout.customView = calloutView;
     
@@ -677,7 +632,7 @@
     popupInfo.title = [graphic.attributes objectForKey:@"name"];
     
 	// create a popup from the popupInfo and a feature
-	self.currentFeaturePopup = [[[AGSPopup alloc]initWithGraphic:graphic popupInfo:popupInfo]autorelease];
+	self.currentFeaturePopup = [[AGSPopup alloc]initWithGraphic:graphic popupInfo:popupInfo];
     
     self.currentFeaturePopup.allowEdit = NO;
     self.currentFeaturePopup.allowDelete = NO;
@@ -693,7 +648,6 @@
     fv.delegate = self;
     fv.featureDelegate = self;
     self.featureView = fv;
-    [fv release];
     
     [self.pinchView addListView:fv];
 }
@@ -735,7 +689,6 @@
         dv.delegate = self;
         dv.directionsDelegate = self;
         self.directionsView = dv;
-        [dv release];
     }
     
     self.directionsView.route = route;
@@ -841,7 +794,6 @@
                                                      inspectionLayer:self.inspectionLayer];
     iv.delegate = self;
     self.inspectionView = iv;
-    [iv release];
     
     WIPinnedView *inspectionPinnedView = [[WIPinnedView alloc] initWithContentView:self.inspectionView 
                                                                    leftPinType:AGSPinnedViewTypePushPin 
@@ -850,7 +802,6 @@
     //slightly off center pin
     inspectionPinnedView.leftPinXOffset = ivFrame.size.width/2 - 30;
     self.inpsectionPinnedView = inspectionPinnedView;
-    [inspectionPinnedView release];
     
     [self.view addSubview:self.inpsectionPinnedView];
     self.pinchView.userInteractionEnabled = NO;
@@ -919,7 +870,6 @@
                                                           inspection:inspection];
     iv.delegate = self;
     self.inspectionView = iv;
-    [iv release];
     
     WIPinnedView *inspectionPinnedView = [[WIPinnedView alloc] initWithContentView:self.inspectionView 
                                                                          leftPinType:AGSPinnedViewTypePushPin 
@@ -928,7 +878,6 @@
     //slightly off center pin
     inspectionPinnedView.leftPinXOffset = ivFrame.size.width/2 - 30;
     self.inpsectionPinnedView = inspectionPinnedView;
-    [inspectionPinnedView release];
     
     [self.view addSubview:self.inpsectionPinnedView];
     self.pinchView.userInteractionEnabled = NO;
@@ -1100,7 +1049,7 @@
     // parse CSV here then add stops
     
     // read everything from text
-    WISimpleCSVParser *csvParser = [[[WISimpleCSVParser alloc] initWithFileURL:url] autorelease];
+    WISimpleCSVParser *csvParser = [[WISimpleCSVParser alloc] initWithFileURL:url];
     csvParser.latField = @"Lat";
     csvParser.longField = @"Long";
     csvParser.nameField = @"Name";
@@ -1238,7 +1187,7 @@
     ts.yoffset = -14.0f;
     [cs.symbols addObject:ts];
     
-    AGSPoint *stopPoint = [[[geom getLocationPoint] copy] autorelease];
+    AGSPoint *stopPoint = [[geom getLocationPoint] copy];
     AGSStopGraphic *sg = [AGSStopGraphic graphicWithGeometry:stopPoint 
                                                       symbol:cs 
                                                   attributes:nil 
@@ -1259,13 +1208,13 @@
     if ([geometry isKindOfClass:[AGSPoint class]]) {
     
         double fRatio = 10000.0 / self.mapView.mapScale;
-        mutEnv =[[self.mapView.visibleArea.envelope mutableCopy] autorelease];
+        mutEnv =[self.mapView.visibleArea.envelope mutableCopy];
         [mutEnv expandByFactor:fRatio];
         [mutEnv centerAtPoint:(AGSPoint *)geometry];
     }
     else 
     {
-        mutEnv = [[geometry.envelope mutableCopy] autorelease];
+        mutEnv = [geometry.envelope mutableCopy];
         [mutEnv expandByFactor:1.4];
     }
     
@@ -1311,7 +1260,7 @@
     // this method takes us offline...
     
     // get a copy of our layers in case something else is modifying them (shouldn't be, but be safe)
-    NSArray *layers = [[self.mapView.mapLayers copy] autorelease];
+    NSArray *layers = [self.mapView.mapLayers copy];
     
     for (AGSLayer *lyr in layers) {
         //Look for all feature layers to take offline
@@ -1328,7 +1277,7 @@
             {
                 //
                 // create a new one in snapshot mode
-                newFL = [[[AGSFeatureLayer alloc] initWithURL:fl.URL mode:AGSFeatureLayerModeSnapshot credential:fl.credential] autorelease];
+                newFL = [[AGSFeatureLayer alloc] initWithURL:fl.URL mode:AGSFeatureLayerModeSnapshot credential:fl.credential];
                 newFL.outFields = [NSArray arrayWithObject:@"*"];
                 newFL.infoTemplateDelegate = newFL;                
                 
@@ -1359,7 +1308,6 @@
         {
             WIWaitingView *wv = [[WIWaitingView alloc] initWithFrame:CGRectMake(412, 309, 200, 150) message:message];
             self.waitingView = wv;
-            [wv release];  
         }
         
         if (self.waitingView.superview == nil) {

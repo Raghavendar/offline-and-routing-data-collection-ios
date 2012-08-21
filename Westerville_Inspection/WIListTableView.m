@@ -28,8 +28,8 @@
     AGSListTableviewType   _type;
 }
 
-@property (nonatomic, retain) WIListTitleView  *titleView;
-@property (nonatomic, retain) UIImageView       *splashView;
+@property (nonatomic, strong) WIListTitleView  *titleView;
+@property (nonatomic, strong) UIImageView       *splashView;
 
 - (WIListTitleViewCell *)defaultTitleCellWithTitle:(NSString *)title;
 - (void)listViewTapped:(UITapGestureRecognizer *)tapRecognizer;
@@ -45,14 +45,6 @@
 @synthesize enabled             = _enabled;
 @synthesize splashView          = _splashView;
 
-- (void)dealloc
-{
-    self.tableview  = nil;
-    self.titleView  = nil;
-    self.splashView = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame listViewTableViewType:(AGSListTableviewType)type datasource:(id<WIListTableViewDataSource>)datasource
 {
@@ -78,7 +70,6 @@
             WIListTitleView *titleView = [[WIListTitleView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, titleRowHeight) title:title];
             
             self.titleView = titleView;
-            [titleView release];
             
             [self addSubview:self.titleView];
             
@@ -92,7 +83,6 @@
         tableview.dataSource = self;
         tableview.delegate = self;
         self.tableview = tableview;
-        [tableview release];
         
         [self addSubview:tableview];
         
@@ -102,7 +92,6 @@
         tapRecognizer.delegate = self;
         
         [self addGestureRecognizer:tapRecognizer];
-        [tapRecognizer release];
         
         self.enabled = YES;
         
@@ -145,7 +134,6 @@
     {
         UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - splashHeight, 320, splashHeight)];
         self.splashView = iv;
-        [iv release];
     }
     
     if (self.splashView.superview == nil) {
@@ -234,7 +222,7 @@
     WIDefaultListTableViewCell *cell = [self.tableview dequeueReusableCellWithIdentifier:defaultCellStringID];
     if(!cell)
     {
-        cell = [[[WIDefaultListTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID] autorelease];
+        cell = [[WIDefaultListTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID];
     }
     
     return cell;
@@ -246,7 +234,7 @@
     WIListTitleViewCell *cell = [self.tableview dequeueReusableCellWithIdentifier:defaultCellStringID];
     if(!cell)
     {
-        cell = [[[WIListTitleViewCell alloc] initWithReuseIdentifier:defaultCellStringID withTitle:title] autorelease];
+        cell = [[WIListTitleViewCell alloc] initWithReuseIdentifier:defaultCellStringID withTitle:title];
     }
     
     return cell;

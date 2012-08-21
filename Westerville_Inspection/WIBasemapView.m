@@ -18,8 +18,8 @@
 
 @interface WIBasemapView () 
 
-@property (nonatomic, retain) AGSLocalTiledLayer *localLayer;
-@property (nonatomic, retain) AGSPortalItem *portalItem;
+@property (nonatomic, strong) AGSLocalTiledLayer *localLayer;
+@property (nonatomic, strong) AGSPortalItem *portalItem;
 
 - (void)finishBasemapLoaded;
 
@@ -31,11 +31,6 @@
 @synthesize localLayer  = _localLayer;
 @synthesize delegate    = _delegate;
 
-- (void)dealloc {
-    self.portalItem = nil;
-    self.localLayer = nil;
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {

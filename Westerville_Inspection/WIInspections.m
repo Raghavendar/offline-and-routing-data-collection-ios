@@ -27,9 +27,9 @@
     NSUInteger _currentInspectionIndex;
 }
 
-@property (nonatomic, retain) NSMutableArray    *syncedFeatures;
-@property (nonatomic, retain) NSMutableArray    *unsyncedFeatures;
-@property (nonatomic, retain) WIInspection     *currentInspectionSyncing;
+@property (nonatomic, strong) NSMutableArray    *syncedFeatures;
+@property (nonatomic, strong) NSMutableArray    *unsyncedFeatures;
+@property (nonatomic, strong) WIInspection     *currentInspectionSyncing;
 
 - (void)syncNextInspection;
 - (void)finalizeSynchronization;
@@ -47,16 +47,6 @@
 
 @synthesize isSyncing                   = _isSyncing;
 
-- (void)dealloc
-{
-    self.featureLayer               = nil;
-    self.syncedFeatures             = nil;
-    self.unsyncedFeatures           = nil;
-    
-    self.currentInspectionSyncing   = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFeatureLayer:(AGSFeatureLayer *)featureLayer
 {
@@ -76,7 +66,7 @@
 + (WIInspections *)inspectionsWithFeatureLayer:(AGSFeatureLayer *)fl
 {
     WIInspections *i = [[WIInspections alloc] initWithFeatureLayer:fl];
-    return [i autorelease];
+    return i;
 }
 
 - (void)syncUnsyncedFeatures
@@ -147,9 +137,8 @@
     }
     
     _featureLayer.editingDelegate = nil;
-    [_featureLayer release];
     
-    _featureLayer = [featureLayer retain];
+    _featureLayer = featureLayer;
     _featureLayer.editingDelegate = self;
     
     //should we blow awy all inspections too?

@@ -21,13 +21,6 @@
 @synthesize fieldName   = _fieldName;
 @synthesize fieldResult = _fieldResult;
 
-- (void)dealloc
-{
-    self.fieldName      = nil;
-    self.fieldResult    = nil;
-    
-    [super dealloc];
-}
 
 
 //Assuming a width of 600 right now...
@@ -43,7 +36,6 @@
         fieldLabel.textAlignment = UITextAlignmentRight;
         
         self.fieldName = fieldLabel;
-        [fieldLabel release];
         
         [self addSubview:self.fieldName];
         
@@ -51,7 +43,6 @@
         lineView.backgroundColor = [UIColor blackColor];
         
         [self addSubview:lineView];
-        [lineView release];
         
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(205, 8, 395, 31)];
         textField.font = self.fieldName.font;
@@ -59,7 +50,6 @@
         textField.backgroundColor = [UIColor clearColor];
         textField.textColor = [UIColor blackColor];
         self.fieldResult = textField;
-        [textField release];
         
         [self addSubview:self.fieldResult];
         

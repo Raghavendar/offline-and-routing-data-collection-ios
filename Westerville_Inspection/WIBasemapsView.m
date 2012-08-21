@@ -30,11 +30,11 @@
     NSUInteger  _numOfBasemapsLeftToDownload;
 }
 
-@property (nonatomic, retain) WIBasemaps        *basemaps;
-@property (nonatomic, retain) WITapeLabelView   *onlineBasemapsImageView;
-@property (nonatomic, retain) WITapeLabelView   *localBasemapsImageView;
-@property (nonatomic, retain) UIImageView       *selectedBasemapCheckView;
-@property (nonatomic, retain) NSMutableArray    *basemapViews;
+@property (nonatomic, strong) WIBasemaps        *basemaps;
+@property (nonatomic, strong) WITapeLabelView   *onlineBasemapsImageView;
+@property (nonatomic, strong) WITapeLabelView   *localBasemapsImageView;
+@property (nonatomic, strong) UIImageView       *selectedBasemapCheckView;
+@property (nonatomic, strong) NSMutableArray    *basemapViews;
 
 - (void)showSelectedCheckmarkAtOrigin:(CGPoint)origin;
 - (void)basemapLoaded;
@@ -53,17 +53,6 @@
 @synthesize basemapViews            = _basemapViews;
 @synthesize selectedBasemapCheckView = _selectedBasemapCheckView;
 
-- (void)dealloc
-{
-    self.basemaps                   = nil;
-    
-    self.onlineBasemapsImageView    = nil;
-    self.localBasemapsImageView     = nil;
-    self.basemapViews               = nil;
-    self.selectedBasemapCheckView   = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -79,13 +68,11 @@
         
         WITapeLabelView *tapeView = [[WITapeLabelView alloc] initWithOrigin:CGPointMake(250, -13) withName:@"Online Basemaps"];
         self.onlineBasemapsImageView = tapeView;
-        [tapeView release];
         
         [self addSubview:self.onlineBasemapsImageView];
         
         WITapeLabelView *tapeView2 = [[WITapeLabelView alloc] initWithOrigin:CGPointMake(250, 385) withName:@"Local Basemaps"];
         self.localBasemapsImageView = tapeView2;
-        [tapeView2 release];
         
         [self addSubview:self.localBasemapsImageView];
         
@@ -135,9 +122,7 @@
         
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(basemapViewTapped:)];
         [pv addGestureRecognizer:tapRecognizer];
-        [tapRecognizer release];
         
-        [v release];
         
         [self addSubview:pv];
         
@@ -148,7 +133,6 @@
             [self showSelectedCheckmarkAtOrigin:CGPointMake(pv.frame.size.width  + pv.frame.origin.x - 40, pv.frame.size.height + pv.frame.origin.y - 40)];
         }
         
-        [pv release];
     }
     
     NSUInteger numLocalLayers = self.basemaps.localBasemaps.count;
@@ -176,12 +160,9 @@
         
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(localLayerViewTapped:)];
         [pv addGestureRecognizer:tapRecognizer];
-        [tapRecognizer release];
         
-        [v release];
         
         [self addSubview:pv];
-        [pv release];
     }
 }
 
@@ -194,7 +175,6 @@
         UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"green_check.png"]];
         iv.frame = CGRectMake(0, 0, 55, 48);
         self.selectedBasemapCheckView = iv;
-        [iv release];
     }
     
     return _selectedBasemapCheckView;

@@ -31,7 +31,7 @@ typedef enum
 @interface WIPinnedView : UIView
 
 /* View being pinned */
-@property (nonatomic,retain) UIView             *contentView;
+@property (nonatomic,strong) UIView             *contentView;
 
 /* User can define the left and right pin types */
 @property (nonatomic, assign) AGSPinnedViewType leftPinType;

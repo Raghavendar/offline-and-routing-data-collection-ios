@@ -43,7 +43,6 @@
         nameLabel.text = name;
         
         [self addSubview:nameLabel];
-        [nameLabel release];
     }
     
     return self;

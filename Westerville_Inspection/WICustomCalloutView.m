@@ -33,15 +33,6 @@
 
 @synthesize graphic             = _graphic;
 
-- (void)dealloc
-{
-    self.addStopButton  = nil;
-    self.moreInfoButton = nil;
-    
-    self.graphic        = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame withGraphic:(AGSGraphic *)graphic
 {    

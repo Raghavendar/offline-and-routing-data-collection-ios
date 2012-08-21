@@ -28,9 +28,9 @@
 
 @interface WIRouteSolver : NSObject <AGSRouteTaskDelegate>
 
-@property (nonatomic, retain) NSURL                         *routingServiceUrl;
-@property (nonatomic, retain) AGSSpatialReference           *spatialReference;
-@property (nonatomic, assign) id<AGSRouteSolverDelegate>    delegate;
+@property (nonatomic, strong) NSURL                         *routingServiceUrl;
+@property (nonatomic, strong) AGSSpatialReference           *spatialReference;
+@property (nonatomic, unsafe_unretained) id<AGSRouteSolverDelegate>    delegate;
 
 - (id)initWithSpatialReference:(AGSSpatialReference *)sr routingServiceUrl:(NSURL *)url;
 

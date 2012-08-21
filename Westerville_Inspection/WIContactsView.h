@@ -28,7 +28,7 @@
 
 @interface WIContactsView : WIListTableView <AGSLocatorDelegate, WIListTableViewDataSource>
 
-@property (nonatomic, assign) id<WIContactsViewDelegate>   contactDelegate;
+@property (nonatomic, unsafe_unretained) id<WIContactsViewDelegate>   contactDelegate;
 
 - (id)initWithFrame:(CGRect)frame withContacts:(NSArray *)contactsList;
 

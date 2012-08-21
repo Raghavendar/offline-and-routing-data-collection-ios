@@ -30,9 +30,9 @@
 
 @interface WIInspectionsView : WIListTableView <WIInspectionsDelegate>
 
-@property (nonatomic, retain) WIInspections *inspections;
+@property (nonatomic, strong) WIInspections *inspections;
 
-@property (nonatomic, assign) id<WIInspectionsViewDelegate>    inspectionsDelegate;
+@property (nonatomic, unsafe_unretained) id<WIInspectionsViewDelegate>    inspectionsDelegate;
 
 - (id)initWithFrame:(CGRect)frame withInspections:(WIInspections *)inspections;
 

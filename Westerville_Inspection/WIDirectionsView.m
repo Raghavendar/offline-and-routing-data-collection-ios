@@ -25,9 +25,9 @@
 
 @interface WIDirectionsView () 
 
-@property (nonatomic, retain) UIButton                      *doneRoutingButton;
-@property (nonatomic, retain) UIButton                      *startGPSButton;
-@property (nonatomic, retain) WIDefaultListTableViewCell   *sizingCell;
+@property (nonatomic, strong) UIButton                      *doneRoutingButton;
+@property (nonatomic, strong) UIButton                      *startGPSButton;
+@property (nonatomic, strong) WIDefaultListTableViewCell   *sizingCell;
 
 - (void)doneButtonPressed:(id)sender;
 - (void)startGPSButtonPressed:(id)sender;
@@ -49,10 +49,7 @@
 {
     self.route              = nil;
     self.selectedDirection  = nil;
-    self.doneRoutingButton  = nil;
-    self.startGPSButton     = nil;
     
-    [super dealloc];
 }
 
 - (id)initWithFrame:(CGRect)frame withRoute:(WIRoute *)route
@@ -97,8 +94,7 @@
         return;
     }
     
-    [_route release];
-    _route = [route retain];
+    _route = route;
     
     [self reloadData];
 }
@@ -110,8 +106,7 @@
         return;
     }
     
-    [_selectedDirection release];
-    _selectedDirection = [selectedDirection retain];
+    _selectedDirection = selectedDirection;
     
     [self reloadData];
 }
@@ -124,7 +119,7 @@
     WIDirectionsTableViewCell *cell = [self.tableview dequeueReusableCellWithIdentifier:defaultCellStringID];
     if(!cell)
     {
-        cell = [[[WIDirectionsTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID] autorelease];
+        cell = [[WIDirectionsTableViewCell alloc] initWithReuseIdentifier:defaultCellStringID];
     }
     
     return cell;
@@ -137,7 +132,6 @@
     {
         WIDefaultListTableViewCell *cell = [[WIDefaultListTableViewCell alloc] initWithReuseIdentifier:@"Esri"];
         self.sizingCell = cell;
-        [cell release];
     }
     
     return _sizingCell;

@@ -33,14 +33,6 @@
 @synthesize nameField       =_nameField;
 @synthesize nameFieldIndex  =_nameFieldIndex;
 
-- (void)dealloc {
-    self.latField   = nil;
-    self.longField  = nil;
-    self.nameField  = nil;
-    self.fileURL    = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFileURL:(NSURL*)fileURL {
     if (self = [super init]) {

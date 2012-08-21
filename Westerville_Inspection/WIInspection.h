@@ -29,18 +29,18 @@
 /* Object to hold all information pertaining to our inspection */
 @interface WIInspection : NSObject
 
-@property (nonatomic, retain) AGSPopup              *popup;
-@property (nonatomic, retain, readonly) AGSPopup    *feature;
+@property (nonatomic, strong) AGSPopup              *popup;
+@property (nonatomic, strong, readonly) AGSPopup    *feature;
 
-@property (nonatomic, retain) WISignatureView      *signatureView;
+@property (nonatomic, strong) WISignatureView      *signatureView;
 
-@property (nonatomic, retain) NSMutableArray        *images;
+@property (nonatomic, strong) NSMutableArray        *images;
 
-@property (nonatomic, retain) NSDate                *dateModified;
-@property (nonatomic, retain) NSDate                *dateSynced;
+@property (nonatomic, strong) NSDate                *dateModified;
+@property (nonatomic, strong) NSDate                *dateSynced;
 
-@property (nonatomic, retain) WIAttributeUtility   *attributeUtility;
-@property (nonatomic, retain) NSMutableArray        *editableFieldInfos;
+@property (nonatomic, strong) WIAttributeUtility   *attributeUtility;
+@property (nonatomic, strong) NSMutableArray        *editableFieldInfos;
 
 - (id)initWithFeatureToInspect:(AGSPopup *)feature inspectionLayer:(AGSFeatureLayer *)inspectionLayer;
 - (void)addAttachments;

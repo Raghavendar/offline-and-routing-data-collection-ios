@@ -35,10 +35,10 @@ typedef enum
 
 @interface WIListTableView : UIView <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 
-@property (nonatomic, retain) UITableView                       *tableview;
+@property (nonatomic, strong) UITableView                       *tableview;
 @property (nonatomic, assign) BOOL                              enabled;
-@property (nonatomic, assign) id<WIListTableViewDelegate>      delegate;
-@property (nonatomic, assign) id<WIListTableViewDataSource>    dataSource;     
+@property (nonatomic, unsafe_unretained) id<WIListTableViewDelegate>      delegate;
+@property (nonatomic, unsafe_unretained) id<WIListTableViewDataSource>    dataSource;     
 
 - (id)initWithFrame:(CGRect)frame listViewTableViewType:(AGSListTableviewType)type datasource:(id<WIListTableViewDataSource>)datasource;
 

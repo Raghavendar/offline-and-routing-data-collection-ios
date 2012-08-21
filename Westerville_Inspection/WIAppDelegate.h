@@ -26,10 +26,10 @@
 
 @interface WIAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, retain) UIWindow              *window;
-@property (nonatomic, retain) WIDeskViewController  *deskViewController;
+@property (nonatomic, strong) UIWindow              *window;
+@property (nonatomic, strong) WIDeskViewController  *deskViewController;
 
 /*   Connectivity    */
-@property (nonatomic, retain) Reachability          *wifiReachability;
+@property (nonatomic, strong) Reachability          *wifiReachability;
 
 @end

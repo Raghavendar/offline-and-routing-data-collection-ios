@@ -20,11 +20,6 @@
 
 @synthesize titleLabel  = _titleLabel;
 
-- (void)dealloc
-{
-    self.titleLabel = nil;
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame title:(NSString *)title
 {
@@ -43,7 +38,6 @@
         label.backgroundColor = [UIColor whiteColor];
         label.textColor = [UIColor darkGrayColor];
         self.titleLabel = label;
-        [label release];
         
         [self addSubview:self.titleLabel];
         

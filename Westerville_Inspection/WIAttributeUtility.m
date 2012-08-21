@@ -67,7 +67,7 @@
         return dollarString;
     }
     
-    NSMutableString *result = [[dollarString mutableCopy] autorelease];
+    NSMutableString *result = [dollarString mutableCopy];
     
     for (AGSField *field in self.featureLayer.fields) {
     
@@ -76,7 +76,6 @@
                                 withString:[self attributeStringForField:field]
                                    options:NSLiteralSearch
                                      range:NSMakeRange(0, [result length])];
-        [keyTemplate release];
     }
     
     return result;
@@ -206,7 +205,6 @@
         
         attributeString = [formatter stringFromNumber:(NSNumber *)value];
                 
-        [formatter release];
     }
     else if(fieldType == AGSFieldTypeString)
     {
@@ -236,7 +234,6 @@
                 
         attributeString = [formatter stringFromNumber:numberValue];
         
-        [formatter release];
     }
     else if(fieldType == AGSFieldTypeDate){
         NSDate* createdDate = [NSDate dateWithTimeIntervalSince1970:[(NSNumber *)value doubleValue] / 1000.0];
@@ -251,7 +248,7 @@
 
 -(NSString*)stringForDate:(NSDate*)date format:(AGSPopupFieldInfoDateFormat)format{
 	
-	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init]autorelease];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	
 	if(format == AGSPopupFieldInfoDateFormatShortDate)
 	{
@@ -438,15 +435,5 @@
     return field.length;
 }
 
--(void)dealloc
-{
-    self.popup = nil;
-    self.featureType = nil;
-    self.featureLayer = nil;
-    self.fieldNamesDictionary = nil;
-    self.fieldDictionary = nil;
-    self.fieldInfosDictionary = nil;
-    [super dealloc];
-}
 
 @end

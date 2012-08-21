@@ -26,9 +26,9 @@
     NSUInteger _tappedIndex;
 }
 
-@property (nonatomic, retain) NSArray           *contacts;
-@property (nonatomic, retain) NSMutableArray    *contactGraphics;
-@property (nonatomic, retain) AGSLocator        *locator;
+@property (nonatomic, strong) NSArray           *contacts;
+@property (nonatomic, strong) NSMutableArray    *contactGraphics;
+@property (nonatomic, strong) AGSLocator        *locator;
 
 @end
 
@@ -39,14 +39,6 @@
 @synthesize contactGraphics = _contactGraphics;
 @synthesize locator         = _locator;
 
-- (void)dealloc
-{
-    self.contacts           = nil;
-    self.contactGraphics    = nil;
-    self.locator            = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame withContacts:(NSArray *)contactsList
 {
@@ -82,7 +74,7 @@
 {
     WIDefaultListTableViewCell *cell = [tv defaultRowCell];
     
-    ABRecordRef currentContact = (ABRecordRef)[self.contacts objectAtIndex:index];
+    ABRecordRef currentContact = (__bridge ABRecordRef)[self.contacts objectAtIndex:index];
     cell.nameLabel.text =[WIContactsManager nameForRecord:currentContact];
 
     return cell;
@@ -120,14 +112,14 @@
             self.locator.delegate = self;
         }
         
-        ABRecordRef contactRecord = (ABRecordRef)[self.contacts objectAtIndex:_tappedIndex];
+        ABRecordRef contactRecord = (__bridge ABRecordRef)[self.contacts objectAtIndex:_tappedIndex];
         
         //just grab contact's first address... Could easily be extended to show all of their addresses
         ABMutableMultiValueRef addressMulti = ABRecordCopyValue(contactRecord, kABPersonAddressProperty);
-        NSDictionary *firstAddress = (NSDictionary *)ABMultiValueCopyValueAtIndex(addressMulti, 0);
+        NSDictionary *firstAddress = (NSDictionary *)CFBridgingRelease(ABMultiValueCopyValueAtIndex(addressMulti, 0));
         NSString *addrString = [WIContactsManager stringForAddress:firstAddress];
         CFRelease(addressMulti);
-        CFRelease(firstAddress);
+        CFRelease(CFBridgingRetain(firstAddress));
         
         NSString *currentLocaleString = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
         NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:addrString, @"SingleLine",
@@ -146,9 +138,9 @@
     if(candidates.count > 0)
     {
         AGSAddressCandidate *addrCandidate = [candidates objectAtIndex:0];
-        AGSPoint *location = [[addrCandidate.location copy] autorelease];
+        AGSPoint *location = [addrCandidate.location copy];
         
-        ABRecordRef contactRecord = (ABRecordRef)[self.contacts objectAtIndex:_tappedIndex];
+        ABRecordRef contactRecord = (__bridge ABRecordRef)[self.contacts objectAtIndex:_tappedIndex];
         NSString *name = [WIContactsManager nameForRecord:contactRecord];
         WIContactGraphic *contactGraphic = [WIContactGraphic contactGraphicWithLocation:location contactName:name];
         

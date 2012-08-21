@@ -19,8 +19,8 @@
 
 @interface WIIndexCardTableViewCell () 
 
-@property (nonatomic, retain) WIIndexCardRowView  *rowView;
-@property (nonatomic, retain) UIImageView          *selectedRowImageView;
+@property (nonatomic, strong) WIIndexCardRowView  *rowView;
+@property (nonatomic, strong) UIImageView          *selectedRowImageView;
 
 @end
 
@@ -31,14 +31,6 @@
 @synthesize selectedRow             = _selectedRow;
 @synthesize selectedRowImageView    = _selectedRowImageView;
 
--(void)dealloc
-{
-    self.rowView                = nil;
-    self.nameLabel              = nil;
-    self.selectedRowImageView   = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier isTitle:(BOOL)title
 {
@@ -52,7 +44,6 @@
         WIIndexCardRowView *rv = [[WIIndexCardRowView alloc] initWithFrame:self.frame isTitleRow:title];
         rv.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.rowView = rv;
-        [rv release];
         
         self.contentView.backgroundColor = [UIColor whiteColor];
         self.backgroundColor = [UIColor whiteColor];
@@ -65,14 +56,12 @@
         nameLabel.backgroundColor = [UIColor whiteColor];
         nameLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         self.nameLabel = nameLabel;
-        [nameLabel release];
         
         UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"checkmark.png"]];
         iv.frame = CGRectMake(self.frame.size.width - (margin + contentHeight), self.frame.size.height - (margin + contentHeight), contentHeight, contentHeight);
         iv.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         iv.hidden = YES;
         self.selectedRowImageView = iv;
-        [iv release];
                 
         
         [self addSubview:self.rowView];

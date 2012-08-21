@@ -29,8 +29,8 @@
 
 @interface WIIndexCardTableView : UIView <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, assign) id<WIIndexCardTableViewDelegate>     indexCardDelegate;
-@property (nonatomic, assign) id<WIIndexCardTableViewDataSource>   indexCardDataSource;
+@property (nonatomic, unsafe_unretained) id<WIIndexCardTableViewDelegate>     indexCardDelegate;
+@property (nonatomic, unsafe_unretained) id<WIIndexCardTableViewDataSource>   indexCardDataSource;
 
 -(id)initWithFrame:(CGRect)frame datasource:(id<WIIndexCardTableViewDataSource>)datasource;
 

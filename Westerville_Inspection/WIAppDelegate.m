@@ -24,14 +24,6 @@
 @synthesize deskViewController  = _deskViewController;
 @synthesize wifiReachability    = _wifiReachability;
 
-- (void)dealloc
-{
-    self.window             = nil;
-    self.deskViewController = nil;
-    self.wifiReachability   = nil;
-
-    [super dealloc];
-}
 
 -(BOOL)application:(UIApplication *)application 
            openURL:(NSURL *)url 
@@ -56,7 +48,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
     
@@ -65,7 +57,7 @@
 	[self.wifiReachability startNotifier];
     
     
-    self.deskViewController = [[[WIDeskViewController alloc] init] autorelease];
+    self.deskViewController = [[WIDeskViewController alloc] init];
     
     self.window.rootViewController = self.deskViewController;
     [self.window makeKeyAndVisible];

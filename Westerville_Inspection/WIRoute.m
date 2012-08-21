@@ -18,7 +18,7 @@
 
 @interface WIRoute () 
 
-@property (nonatomic, retain, readwrite) NSMutableArray     *stops;
+@property (nonatomic, strong, readwrite) NSMutableArray     *stops;
 
 @end
 
@@ -27,13 +27,6 @@
 @synthesize stops           = _stops;
 @synthesize directions      = _directions;
 
-- (void)dealloc
-{
-    self.stops              = nil;
-    self.directions         = nil;
-    
-    [super dealloc];
-}
 
 - (id)init
 {
@@ -51,7 +44,7 @@
 //Convenience class initializer
 + (WIRoute *)route
 {
-    WIRoute *r = [[[WIRoute alloc] init]  autorelease];
+    WIRoute *r = [[WIRoute alloc] init];
     return r;
 }
 
@@ -118,7 +111,6 @@
         }
         
         //Explicitly release
-        [ftrEnv release];
     }
     
     //Finally expand by a buffering constant

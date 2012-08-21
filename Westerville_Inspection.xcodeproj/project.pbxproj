@@ -35,7 +35,6 @@
 		784B4626150EC3B8004FD139 /* PushPinGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 784B4625150EC3B8004FD139 /* PushPinGrey.png */; };
 		784B463B150ECC3A004FD139 /* WIStringSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 784B463A150ECC3A004FD139 /* WIStringSymbol.m */; };
 		7862B24C150EEC2A00C73769 /* WIAttributeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7862B249150EEC2A00C73769 /* WIAttributeUtility.m */; };
-		7862B24D150EEC2A00C73769 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7862B24B150EEC2A00C73769 /* Reachability.m */; };
 		7862B271150FAC7F00C73769 /* address_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7862B270150FAC7F00C73769 /* address_icon.png */; };
 		786570A0150FF2B800037CCA /* WIBasemapsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7865709F150FF2B800037CCA /* WIBasemapsView.m */; };
 		786570A4150FF30F00037CCA /* WIBasemaps.m in Sources */ = {isa = PBXBuildFile; fileRef = 786570A3150FF30F00037CCA /* WIBasemaps.m */; };
@@ -105,6 +104,7 @@
 		78E513441512B21000C587EF /* stop_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 78E513431512B21000C587EF /* stop_splash.png */; };
 		78E59F341516658C006F86DA /* WIDomainPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E59F331516658C006F86DA /* WIDomainPickerView.m */; };
 		78EF78DB151A4F3C00D9212C /* WISignHereCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EF78DA151A4F3C00D9212C /* WISignHereCalloutView.m */; };
+		884B14B115E3F1AA0030A2ED /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 884B14B015E3F1AA0030A2ED /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,8 +146,6 @@
 		784B463A150ECC3A004FD139 /* WIStringSymbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIStringSymbol.m; sourceTree = "<group>"; };
 		7862B248150EEC2A00C73769 /* WIAttributeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 2; path = WIAttributeUtility.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7862B249150EEC2A00C73769 /* WIAttributeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WIAttributeUtility.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		7862B24A150EEC2A00C73769 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		7862B24B150EEC2A00C73769 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7862B270150FAC7F00C73769 /* address_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_icon.png; sourceTree = "<group>"; };
 		7865709E150FF2B800037CCA /* WIBasemapsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = WIBasemapsView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7865709F150FF2B800037CCA /* WIBasemapsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = WIBasemapsView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -255,6 +253,8 @@
 		78E59F331516658C006F86DA /* WIDomainPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIDomainPickerView.m; sourceTree = "<group>"; };
 		78EF78D9151A4F3C00D9212C /* WISignHereCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WISignHereCalloutView.h; sourceTree = "<group>"; };
 		78EF78DA151A4F3C00D9212C /* WISignHereCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISignHereCalloutView.m; sourceTree = "<group>"; };
+		884B14AF15E3F1AA0030A2ED /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = "<group>"; };
+		884B14B015E3F1AA0030A2ED /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,8 +300,8 @@
 		7862B24F150EECAE00C73769 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				7862B24A150EEC2A00C73769 /* Reachability.h */,
-				7862B24B150EEC2A00C73769 /* Reachability.m */,
+				884B14AF15E3F1AA0030A2ED /* Reachability.h */,
+				884B14B015E3F1AA0030A2ED /* Reachability.m */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -740,7 +740,6 @@
 				78A824F4150E76DB0042CDA9 /* WIRoute.m in Sources */,
 				784B463B150ECC3A004FD139 /* WIStringSymbol.m in Sources */,
 				7862B24C150EEC2A00C73769 /* WIAttributeUtility.m in Sources */,
-				7862B24D150EEC2A00C73769 /* Reachability.m in Sources */,
 				4BE4733B150FE10C00DC726A /* WIPinchableContainerView.m in Sources */,
 				4B116EFF15105D9100935853 /* WISignatureView.m in Sources */,
 				7832EE8A150FC7DD008188F5 /* WIPinnedView.m in Sources */,
@@ -775,6 +774,7 @@
 				788C4FD7151A72180001DE0C /* WIArrowCalloutView.m in Sources */,
 				788C4FE0151A93C60001DE0C /* WIWaitingView.m in Sources */,
 				7873648E152A53020049E7A5 /* WICustomCalloutView.m in Sources */,
+				884B14B115E3F1AA0030A2ED /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +848,7 @@
 		78B3CD35150A6E51007CA9EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$HOME/Library/SDKs/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -871,6 +872,7 @@
 		78B3CD36150A6E51007CA9EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$HOME/Library/SDKs/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

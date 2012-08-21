@@ -29,16 +29,16 @@
 @interface WIDomainPickerView : UIView <WIIndexCardTableViewDataSource, WIIndexCardTableViewDelegate, UITableViewDelegate>
 
 /* Value selected by the domain picker */
-@property (nonatomic, retain) id                                selectedValue;
+@property (nonatomic, strong) id                                selectedValue;
 
 /* Field representing the domain, subtype, etc  */
-@property (nonatomic, retain) AGSPopupFieldInfo                 *fieldOfInterest;
+@property (nonatomic, strong) AGSPopupFieldInfo                 *fieldOfInterest;
 
 /* Delegate  */
-@property (nonatomic, assign) id<WIDomainPickerViewDelegate>   delegate;
+@property (nonatomic, unsafe_unretained) id<WIDomainPickerViewDelegate>   delegate;
 
 /* Chosen template */
-@property (nonatomic, retain, readonly) AGSFeatureTemplate      *templateChosen;
+@property (nonatomic, strong, readonly) AGSFeatureTemplate      *templateChosen;
 
 - (id)initWithFrame:(CGRect)frame withInspection:(WIInspection *)inspection fieldOfInterest:(AGSPopupFieldInfo *)fieldInfo;
 

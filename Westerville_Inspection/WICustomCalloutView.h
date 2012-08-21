@@ -26,10 +26,10 @@
 
 @interface WICustomCalloutView : UIView
 
-@property (nonatomic, assign) id<WICustomCalloutDelegate>   delegate;
-@property (nonatomic, retain) AGSGraphic                    *graphic;
-@property (nonatomic, retain) UIButton                      *addStopButton;
-@property (nonatomic, retain) UIButton                      *moreInfoButton;
+@property (nonatomic, unsafe_unretained) id<WICustomCalloutDelegate>   delegate;
+@property (nonatomic, strong) AGSGraphic                    *graphic;
+@property (nonatomic, strong) UIButton                      *addStopButton;
+@property (nonatomic, strong) UIButton                      *moreInfoButton;
 @property (nonatomic, assign) BOOL                          showMoreInfoButton;
 
 - (id)initWithFrame:(CGRect)frame withGraphic:(AGSGraphic *)graphic;

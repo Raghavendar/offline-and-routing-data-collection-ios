@@ -22,8 +22,8 @@
 
 @interface WIPinnedView ()
 
-@property (nonatomic, retain) UIImageView   *leftPinView;
-@property (nonatomic, retain) UIImageView   *rightPinView;
+@property (nonatomic, strong) UIImageView   *leftPinView;
+@property (nonatomic, strong) UIImageView   *rightPinView;
 
 - (void)setImageView:(UIImageView *)iv toType:(AGSPinnedViewType)type;
 
@@ -48,10 +48,7 @@
 - (void)dealloc
 {
     self.contentView    = nil;
-    self.leftPinView    = nil;
-    self.rightPinView   = nil;
     
-    [super dealloc];
 }
 
 - (id)initWithContentView:(UIView *)cv leftPinType:(AGSPinnedViewType)leftPinType rightPinType:(AGSPinnedViewType)rightPinType
@@ -67,11 +64,9 @@
     {
         UIImageView *liv = [[UIImageView alloc] initWithFrame:CGRectZero];
         self.leftPinView = liv;
-        [liv release];
         
         UIImageView *riv = [[UIImageView alloc] initWithFrame:CGRectZero];
         self.rightPinView = riv;
-        [riv release];
         
         [self addSubview:self.leftPinView];
         [self addSubview:self.rightPinView];
@@ -182,8 +177,8 @@
 		[_contentView removeFromSuperview];
 	}
 	
-	[contentView autorelease];
-	_contentView = [contentView retain];
+	
+	_contentView = contentView;
 	
     //below pins
     [self insertSubview:_contentView atIndex:0];

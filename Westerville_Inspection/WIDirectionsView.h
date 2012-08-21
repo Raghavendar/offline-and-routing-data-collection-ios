@@ -28,9 +28,9 @@
 
 @interface WIDirectionsView : WIListTableView <WIListTableViewDataSource>
 
-@property (nonatomic, assign) id<WIDirectionsViewDelegate> directionsDelegate;
-@property (nonatomic, retain) WIRoute                      *route;
-@property (nonatomic, retain) AGSDirectionGraphic           *selectedDirection;
+@property (nonatomic, unsafe_unretained) id<WIDirectionsViewDelegate> directionsDelegate;
+@property (nonatomic, strong) WIRoute                      *route;
+@property (nonatomic, strong) AGSDirectionGraphic           *selectedDirection;
 
 - (id)initWithFrame:(CGRect)frame withRoute:(WIRoute *)route;
 

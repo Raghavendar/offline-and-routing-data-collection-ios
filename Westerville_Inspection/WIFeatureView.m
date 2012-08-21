@@ -22,10 +22,10 @@
 
 @interface WIFeatureView ()
 
-@property (nonatomic, retain) AGSPopup              *popup;
-@property (nonatomic, retain) WIAttributeUtility   *attributeUtility;
+@property (nonatomic, strong) AGSPopup              *popup;
+@property (nonatomic, strong) WIAttributeUtility   *attributeUtility;
 
-@property (nonatomic, retain) UIButton              *inspectButton;
+@property (nonatomic, strong) UIButton              *inspectButton;
 
 @end
 
@@ -38,15 +38,6 @@
 
 @synthesize inspectButton       = _inspectButton;
 
-- (void)dealloc
-{
-    self.popup              = nil;
-    self.attributeUtility   = nil;
-    
-    self.inspectButton      = nil;
-    
-    [super dealloc];
-}
 
 - (id)initWithFrame:(CGRect)frame withPopup:(AGSPopup *)popup
 {
@@ -56,7 +47,7 @@
         self.popup = popup;
         
         //Attribute utility will help create string representations of our field data
-        self.attributeUtility = [[[WIAttributeUtility alloc] initWithPopup:self.popup] autorelease];
+        self.attributeUtility = [[WIAttributeUtility alloc] initWithPopup:self.popup];
         
         self.backgroundColor = [UIColor whiteColor];
 

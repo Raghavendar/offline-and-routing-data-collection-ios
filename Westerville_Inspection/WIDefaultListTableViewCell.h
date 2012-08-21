@@ -24,7 +24,7 @@
 
 @interface WIDefaultListTableViewCell : WIListTableViewCell
 
-@property (nonatomic, retain) UILabel   *nameLabel;
+@property (nonatomic, strong) UILabel   *nameLabel;
 @property (nonatomic, assign) BOOL      editing;
 
 - (CGFloat)bottomMargin;

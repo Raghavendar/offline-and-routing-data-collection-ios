@@ -27,9 +27,9 @@
  */
 @interface WIInspections : NSObject <WIListTableViewDataSource, AGSFeatureLayerEditingDelegate, AGSAttachmentManagerDelegate>
 
-@property (nonatomic, retain) AGSFeatureLayer               *featureLayer;
+@property (nonatomic, strong) AGSFeatureLayer               *featureLayer;
 @property (nonatomic, assign) BOOL                          isSyncing;
-@property (nonatomic, assign) id<WIInspectionsDelegate>    delegate;
+@property (nonatomic, unsafe_unretained) id<WIInspectionsDelegate>    delegate;
 
 /* Create our 'empty' inspections object with a feature layer */
 - (id)initWithFeatureLayer:(AGSFeatureLayer *)featureLayer;
