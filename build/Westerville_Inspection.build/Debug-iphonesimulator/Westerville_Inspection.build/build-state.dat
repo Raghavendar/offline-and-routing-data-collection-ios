@@ -4,52 +4,52 @@ r1
 cCheck dependencies
 cProcessInfoPlistFile /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/Info.plist Westerville_Inspection/Westerville_Inspection-Info.plist
 cProcessPCH /var/folders/8x/_hv6xyb51f1dpgv8c0z2zglx3n_3cv/C/com.apple.Xcode.1196756379/SharedPrecompiledHeaders/Westerville_Inspection-Prefix-gheiripbdmkkxehhowenfaluromq/Westerville_Inspection-Prefix.pch.pth Westerville_Inspection/Westerville_Inspection-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIAppDelegate.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/main.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIContactsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPinnedView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIPinnedView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTableView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListTableView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspections.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIInspections.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDirectionsTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIDirectionsTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISimpleCSVParser.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WISimpleCSVParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDeskViewController.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIDeskViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIAppDelegate.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactsManager.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIContactsManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRouteStopsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIRouteStopsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDeskViewController.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIDeskViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/AGSGeometry+Additions.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/AGSGeometry+Additions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRouteSolver.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIRouteSolver.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIContactsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRouteStopsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIRouteStopsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRoute.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIRoute.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIStringSymbol.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIStringSymbol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIAttributeUtility.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIAttributeUtility.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPinchableContainerView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIPinchableContainerView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIAttributeUtility.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIAttributeUtility.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignatureView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WISignatureView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIBasemapsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIBasemapsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPinnedView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIPinnedView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIBasemaps.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIBasemaps.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WITapeLabelView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WITapeLabelView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIBasemapView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIBasemapView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDefaultListTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIDefaultListTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListRowView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListRowView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTableView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListTableView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTitleViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListTitleViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTitleView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListTitleView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTitleViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIListTitleViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDirectionsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIDirectionsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionsView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIInspectionsView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIFeatureView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIFeatureView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspections.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIInspections.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIInspectionView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignatureLineView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WISignatureLineView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionsTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIInspectionsTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIFeatureView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIFeatureView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionFormCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIInspectionFormCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionsTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIInspectionsTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDirectionsTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIDirectionsTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspection.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIInspection.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactGraphic.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIContactGraphic.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDomainPickerView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIDomainPickerView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISimpleCSVParser.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WISimpleCSVParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactGraphic.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIContactGraphic.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardRowView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIIndexCardRowView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardTableView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIIndexCardTableView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardTableViewCell.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIIndexCardTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignHereCalloutView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WISignHereCalloutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardTableView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIIndexCardTableView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPolaroidView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/../Westerville_Inspection/WIPolaroidView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignHereCalloutView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WISignHereCalloutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIArrowCalloutView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIArrowCalloutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIWaitingView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIWaitingView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WICustomCalloutView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WICustomCalloutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/Reachability.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WICustomCalloutView.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WICustomCalloutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/Inspections normal i386
 cGenerateDSYMFile /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app.dSYM /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/Inspections
 cCopyStringsFile /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/en.lproj/InfoPlist.strings Westerville_Inspection/en.lproj/InfoPlist.strings
@@ -58,32 +58,32 @@ cCpResource Westerville_Inspection/Resources/Images/Red_Push_Pin.png build/Debug
 cCpResource Westerville_Inspection/Resources/Images/a_tack.png build/Debug-iphonesimulator/Inspections.app/a_tack.png
 cCpResource Westerville_Inspection/Resources/Images/PushPinGrey.png build/Debug-iphonesimulator/Inspections.app/PushPinGrey.png
 cCpResource Westerville_Inspection/Resources/Images/PushPinRed.png build/Debug-iphonesimulator/Inspections.app/PushPinRed.png
-cCpResource Westerville_Inspection/Resources/Images/PushPinBlue.png build/Debug-iphonesimulator/Inspections.app/PushPinBlue.png
 cCpResource Westerville_Inspection/Resources/Images/address_icon.png build/Debug-iphonesimulator/Inspections.app/address_icon.png
+cCpResource Westerville_Inspection/Resources/Images/PushPinBlue.png build/Debug-iphonesimulator/Inspections.app/PushPinBlue.png
 cCpResource Westerville_Inspection/Resources/Images/masking_tape_small.png build/Debug-iphonesimulator/Inspections.app/masking_tape_small.png
 cCpResource Westerville_Inspection/Resources/Images/masking_tape_label.png build/Debug-iphonesimulator/Inspections.app/masking_tape_label.png
 cCpResource Westerville_Inspection/Resources/Images/offline_tape.png build/Debug-iphonesimulator/Inspections.app/offline_tape.png
-cCpResource Westerville_Inspection/Resources/Images/inspection_splash.png build/Debug-iphonesimulator/Inspections.app/inspection_splash.png
 cCpResource Westerville_Inspection/Resources/Images/contacts_splash.png build/Debug-iphonesimulator/Inspections.app/contacts_splash.png
-cCpResource Westerville_Inspection/Resources/Images/stop_splash.png build/Debug-iphonesimulator/Inspections.app/stop_splash.png
+cCpResource Westerville_Inspection/Resources/Images/inspection_splash.png build/Debug-iphonesimulator/Inspections.app/inspection_splash.png
 cCpResource Westerville_Inspection/Resources/Images/paper_texture.png build/Debug-iphonesimulator/Inspections.app/paper_texture.png
+cCpResource Westerville_Inspection/Resources/Images/stop_splash.png build/Debug-iphonesimulator/Inspections.app/stop_splash.png
 cCpResource Westerville_Inspection/Resources/Images/cancelButton.png build/Debug-iphonesimulator/Inspections.app/cancelButton.png
 cCpResource Westerville_Inspection/Resources/Images/checkmark.png build/Debug-iphonesimulator/Inspections.app/checkmark.png
 cCpResource Westerville_Inspection/Resources/Images/feature_splash.png build/Debug-iphonesimulator/Inspections.app/feature_splash.png
 cCpResource Westerville_Inspection/Resources/Images/bookmark.png build/Debug-iphonesimulator/Inspections.app/bookmark.png
 cCpResource Westerville_Inspection/Resources/Images/info48.png build/Debug-iphonesimulator/Inspections.app/info48.png
-cCpResource Westerville_Inspection/Resources/Images/stop48.png build/Debug-iphonesimulator/Inspections.app/stop48.png
 cCpResource Westerville_Inspection/Resources/Images/callout_sticker.png build/Debug-iphonesimulator/Inspections.app/callout_sticker.png
 cCpResource Westerville_Inspection/Resources/Images/camera_line_drawing.png build/Debug-iphonesimulator/Inspections.app/camera_line_drawing.png
+cCpResource Westerville_Inspection/Resources/Images/stop48.png build/Debug-iphonesimulator/Inspections.app/stop48.png
 cCpResource Westerville_Inspection/Resources/Images/polaroid.png build/Debug-iphonesimulator/Inspections.app/polaroid.png
 cCpResource Westerville_Inspection/Resources/Images/black-arrow.png build/Debug-iphonesimulator/Inspections.app/black-arrow.png
-cCpResource Westerville_Inspection/Resources/Images/route_splash.png build/Debug-iphonesimulator/Inspections.app/route_splash.png
 cCpResource Westerville_Inspection/Resources/Images/icon.png build/Debug-iphonesimulator/Inspections.app/icon.png
-cCpResource Westerville_Inspection/Resources/Images/green_check.png build/Debug-iphonesimulator/Inspections.app/green_check.png
+cCpResource Westerville_Inspection/Resources/Images/route_splash.png build/Debug-iphonesimulator/Inspections.app/route_splash.png
 cCpResource Westerville_Inspection/Resources/Images/StopSymbol.png build/Debug-iphonesimulator/Inspections.app/StopSymbol.png
+cCpResource Westerville_Inspection/Resources/Images/green_check.png build/Debug-iphonesimulator/Inspections.app/green_check.png
 cCpResource Westerville_Inspection/Resources/Images/download_button.png build/Debug-iphonesimulator/Inspections.app/download_button.png
-cCpResource Westerville_Inspection/Resources/sample.csv build/Debug-iphonesimulator/Inspections.app/sample.csv
 cCpResource README.txt build/Debug-iphonesimulator/Inspections.app/README.txt
+cCpResource Westerville_Inspection/Resources/sample.csv build/Debug-iphonesimulator/Inspections.app/sample.csv
 cCpResource /Users/albe5259/Library/SDKs/ArcGIS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle build/Debug-iphonesimulator/Inspections.app/ArcGIS.bundle
 cTouch /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app
 
@@ -1648,11 +1648,11 @@ t1345232932
 s688
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app
-t1345567514
+t1345567539
 s1292
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app.dSYM
-t1345567431
+t1345567539
 s102
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/ArcGIS.bundle
@@ -1664,8 +1664,8 @@ t1345566996
 s1218
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/Inspections
-t1345567514
-s10649396
+t1345567538
+s10696064
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Debug-iphonesimulator/Inspections.app/PkgInfo
 t1345566996
@@ -1800,8 +1800,8 @@ t1345567281
 s23809
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/AGSGeometry+Additions.o
-t1345567495
-s3424
+t1345567537
+s10104
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/Inspections.LinkFileList
 c000000005033BA2F00000000000024BA
@@ -1809,184 +1809,184 @@ t1345567279
 s9402
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/Reachability.o
-t1345567514
-s10384
+t1345567538
+s20816
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIAppDelegate.o
-t1345567492
-s13240
+t1345567537
+s86228
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIArrowCalloutView.o
-t1345567512
-s4160
+t1345567538
+s74104
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIAttributeUtility.o
-t1345567497
-s31720
+t1345567537
+s132860
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIBasemapView.o
-t1345567501
-s11612
+t1345567538
+s89252
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIBasemaps.o
-t1345567500
-s7148
+t1345567538
+s77052
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIBasemapsView.o
-t1345567499
-s25120
+t1345567537
+s108744
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactGraphic.o
-t1345567509
-s5288
+t1345567538
+s80812
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactsManager.o
-t1345567493
-s12452
+t1345567537
+s24284
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIContactsView.o
-t1345567494
-s18060
+t1345567537
+s96856
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WICustomCalloutView.o
-t1345567513
-s9720
+t1345567538
+s83420
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDefaultListTableViewCell.o
-t1345567501
-s8468
+t1345567537
+s72904
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDeskViewController.o
-t1345567493
-s135544
+t1345567537
+s306148
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDirectionsTableViewCell.o
-t1345567508
-s6540
+t1345567537
+s70744
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDirectionsView.o
-t1345567504
-s23496
+t1345567538
+s107508
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIDomainPickerView.o
-t1345567510
-s31920
+t1345567538
+s129784
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIFeatureView.o
-t1345567505
-s13956
+t1345567538
+s103940
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardRowView.o
-t1345567510
-s5736
+t1345567538
+s69348
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardTableView.o
-t1345567511
-s18236
+t1345567538
+s84900
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIIndexCardTableViewCell.o
-t1345567511
-s11700
+t1345567538
+s77216
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspection.o
-t1345567508
-s19716
+t1345567538
+s112364
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionFormCell.o
-t1345567507
-s8688
+t1345567538
+s73156
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionView.o
-t1345567506
-s61892
+t1345567538
+s179672
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspections.o
-t1345567505
-s24728
+t1345567537
+s120916
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionsTableViewCell.o
-t1345567507
-s10368
+t1345567538
+s75844
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIInspectionsView.o
-t1345567504
-s15008
+t1345567538
+s103376
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListRowView.o
-t1345567501
-s3404
+t1345567537
+s65528
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTableView.o
-t1345567502
-s27096
+t1345567537
+s101104
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTableViewCell.o
-t1345567502
-s5312
+t1345567537
+s68440
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTitleView.o
-t1345567503
-s5712
+t1345567538
+s68472
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIListTitleViewCell.o
-t1345567503
-s5292
+t1345567538
+s68336
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPinchableContainerView.o
-t1345567498
-s28804
+t1345567537
+s104664
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPinnedView.o
-t1345567498
-s20496
+t1345567537
+s93712
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIPolaroidView.o
-t1345567511
-s9060
+t1345567538
+s74440
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRoute.o
-t1345567496
-s8272
+t1345567537
+s93100
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRouteSolver.o
-t1345567495
-s18808
+t1345567537
+s101548
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIRouteStopsView.o
-t1345567494
-s16308
+t1345567537
+s95280
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignHereCalloutView.o
-t1345567512
-s4144
+t1345567538
+s74072
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignatureLineView.o
-t1345567506
-s5684
+t1345567538
+s68716
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISignatureView.o
-t1345567498
-s10432
+t1345567537
+s80072
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WISimpleCSVParser.o
-t1345567509
-s12504
+t1345567537
+s22264
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIStringSymbol.o
-t1345567497
-s3688
+t1345567537
+s74364
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WITapeLabelView.o
-t1345567500
-s4928
+t1345567537
+s67508
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/WIWaitingView.o
-t1345567513
-s8216
+t1345567538
+s75216
 
 N/Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/main.o
-t1345567492
-s1352
+t1345567537
+s3480
 
 N/var/folders/8x/_hv6xyb51f1dpgv8c0z2zglx3n_3cv/C/com.apple.Xcode.1196756379/SharedPrecompiledHeaders/Westerville_Inspection-Prefix-bpfbvfgmrkjcxqgutctescyzmxxm/Westerville_Inspection-Prefix.pch.pth
 t1345567278
@@ -2001,8 +2001,8 @@ t1345567491
 s4108792
 
 N/var/folders/8x/_hv6xyb51f1dpgv8c0z2zglx3n_3cv/C/com.apple.Xcode.1196756379/SharedPrecompiledHeaders/Westerville_Inspection-Prefix-gheiripbdmkkxehhowenfaluromq/Westerville_Inspection-Prefix.pch.pth
-t2
-s0
+t1345567537
+s4116632
 
 NWesterville_Inspection/Westerville_Inspection-Info.plist
 c00000000502EA02400000000000007DA
@@ -2152,7 +2152,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc3d8fab0f2e3b541^82c436b1f2e3b541^---0#1#0#--18"Check dependencies36"473DA27F-70C9-4431-A0E8-0B6E9E9CE0EC-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2ca0b07450e4b541^a400317550e4b541^---0#1#0#--18"Check dependencies36"F93729D2-217D-41E4-8345-72775B4E2993-
 
 CCompileC build/Westerville_Inspection.build/Debug-iphonesimulator/Westerville_Inspection.build/Objects-normal/i386/AGSGeometry+Additions.o /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/AGSGeometry+Additions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s367260337.565615

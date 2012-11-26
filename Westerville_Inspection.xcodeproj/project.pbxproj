@@ -865,6 +865,7 @@
 				PRODUCT_NAME = Inspections;
 				PROVISIONING_PROFILE = "";
 				SYMROOT = build;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -889,6 +890,7 @@
 				PRODUCT_NAME = Inspections;
 				PROVISIONING_PROFILE = "";
 				SYMROOT = build;
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
