@@ -100,7 +100,7 @@
         self.inspection = i;
         
         //save original attributes in case they decide to cancel
-        self.originalFeatureAttributes = [self.inspection.popup.graphic.allAttributes mutableCopy];
+        self.originalFeatureAttributes = [[self.inspection.popup.graphic allAttributes] mutableCopy];
          
         // setup our custom look and feel
         [self setupUxForFrame:frame];
@@ -118,7 +118,7 @@
         self.inspection = inspection;
         
         //save original attributes in case they decide to cancel
-        self.originalFeatureAttributes = [self.inspection.popup.graphic.allAttributes mutableCopy];
+        self.originalFeatureAttributes = [[self.inspection.popup.graphic allAttributes] mutableCopy];
         
         // setup our custom look and feel
         [self setupUxForFrame:frame];
@@ -264,7 +264,7 @@
     WIDomainPickerView *dpv = [[WIDomainPickerView alloc] initWithFrame:domainRect 
                                                            withInspection:self.inspection 
                                                           fieldOfInterest:fi];
-    dpv.selectedValue = [self.inspection.popup.graphic.allAttributes objectForKey:fi.fieldName];
+    dpv.selectedValue = [self.inspection.popup.graphic attributeForKey:fi.fieldName];
     dpv.delegate = self;
     
     WIPinnedView *pv = [[WIPinnedView alloc] initWithContentView:dpv 
@@ -318,15 +318,16 @@
 {
     if (self.inspection.attributeUtility.featureLayer){
 		if ([dpv.fieldOfInterest.fieldName isEqualToString:self.inspection.attributeUtility.featureLayer.typeIdField]){
-			if (![dpv.selectedValue isEqual:[self.inspection.popup.graphic.allAttributes objectForKey:dpv.fieldOfInterest.fieldName]]){
+			if (![dpv.selectedValue isEqual:[self.inspection.popup.graphic attributeForKey:dpv.fieldOfInterest.fieldName]]){
                 
 				// change values based on new template chosen
 				AGSFeatureLayer *fl = self.inspection.attributeUtility.featureLayer;
 				AGSFeatureTemplate *t = dpv.templateChosen;
 				AGSGraphic *p = t.prototype;
 				AGSGraphic *g = self.inspection.popup.graphic;
-				for (NSString *fieldName in [p.allAttributes allKeys]){
-					[g setAttribute:[p.allAttributes objectForKey:fieldName] forKey:fieldName];
+				for (NSString *fieldName in [[p allAttributes] allKeys]){
+                    
+					[g setAttribute: [p attributeForKey:fieldName]  forKey:fieldName];
 				}
 				// Update popupUtility.featureType
 				for (AGSFeatureType *type in fl.types){
@@ -338,7 +339,7 @@
 		}
 	}
     
-    [self.inspection.popup.graphic setAttribute:dpv.selectedValue forKey:dpv.fieldOfInterest.fieldName];
+    [self.inspection.popup.graphic setAttribute:dpv.selectedValue  forKey:dpv.fieldOfInterest.fieldName];
     
     //Update Ux
     [self.tableView reloadData];
@@ -404,7 +405,7 @@
 
 - (void)cancelButtonPressed:(id)sender
 {
-    self.inspection.popup.graphic.allAttributes = self.originalFeatureAttributes;
+    [self.inspection.popup.graphic setAllAttributes: self.originalFeatureAttributes];
     
     if ([self.delegate respondsToSelector:@selector(inspectionView:didCancelCollectingInspection:)]) {
         [self.delegate inspectionView:self didCancelCollectingInspection:self.inspection];

@@ -395,7 +395,7 @@
     {
         AGSSimpleMarkerSymbol *sms = [AGSSimpleMarkerSymbol simpleMarkerSymbolWithColor:[[UIColor blackColor] colorWithAlphaComponent:.1]];
         sms.style = AGSSimpleMarkerSymbolStyleCircle;
-        sms.size = CGSizeMake(130.0, 130.0);
+        sms.size = CGSizeMake(130, 130);
         
         AGSSimpleLineSymbol *blackLine = [AGSSimpleLineSymbol simpleLineSymbolWithColor:[UIColor darkGrayColor]];
         blackLine.width = 1.5;
@@ -535,7 +535,6 @@
 {
     contact.infoTemplateDelegate = self;
     [self.contactsLayer addGraphic:contact];
-    [self.contactsLayer refresh];
     
     [self zoomToGeometry:contact.geometry];
 }
@@ -556,8 +555,7 @@
     
     //Make sure the callout shows
     [self mapView:self.mapView shouldShowCalloutForGraphic:selectedFeature];
-    [self.mapView.callout showCalloutAtPoint:[selectedFeature.geometry getLocationPoint] forGraphic:selectedFeature animated:YES];
-    
+    [self.mapView.callout showCalloutAtPoint:[selectedFeature.geometry getLocationPoint]  forGraphic:selectedFeature animated:YES];
     [self.mapView centerAtPoint:[selectedFeature.geometry getLocationPoint] animated:YES];
     
     //Make sure the feature popup shows up on the left
@@ -613,7 +611,6 @@
 
     [self.route addStop:sg];
     [self.stopsLayer addGraphic:sg];
-    [self.stopsLayer refresh];
     
     //update appropriate views
     [self.stopsView reloadData];
@@ -630,7 +627,7 @@
     //filter popup to make some properties invisible (OBJECTID, GLOBALID, etc)
     [self filterPopupInfo:popupInfo];
     
-    popupInfo.title = [graphic.allAttributes objectForKey:@"name"];
+    popupInfo.title = [graphic attributeAsStringForKey:@"name"];
     
 	// create a popup from the popupInfo and a feature
 	self.currentFeaturePopup = [[AGSPopup alloc]initWithGraphic:graphic popupInfo:popupInfo];
@@ -673,14 +670,12 @@
         
         AGSPictureMarkerSymbol *pinSymbol = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImage:[UIImage imageNamed:@"PushPinGrey.png"]];
         pinSymbol.size = CGSizeMake(50.0f, 45.0f);
-        pinSymbol.offset = CGPointMake(3.0f, 22.0f);
-                
+        pinSymbol.offset = CGPointMake(3, 22);
+        
         AGSGraphic *pinGraphic = [AGSGraphic graphicWithGeometry:pt symbol:pinSymbol attributes:nil infoTemplateDelegate:nil];
         
         [self.routeLayer addGraphic:pinGraphic];
     }
-    
-    [self.routeLayer refresh];
     
     //show directions in side panel
     if(_directionsView == nil)
@@ -711,7 +706,6 @@
 {
     //Clear old route
     [self.routeLayer removeAllGraphics];
-    [self.routeLayer refresh];
     
     //Clear old directions
     [self.pinchView removeListView:self.directionsView];
@@ -726,7 +720,6 @@
 - (void)routeStopsView:(WIRouteStopsView *)rsv willDeleteStop:(AGSStopGraphic *)stop
 {
     [self.stopsLayer removeGraphic:stop];
-    [self.stopsLayer refresh];
 }
 
 #pragma mark -
@@ -734,7 +727,6 @@
 - (void)directionsViewWantsToHideDirections:(WIDirectionsView *)dv
 {
     [self.routeLayer removeAllGraphics];
-    [self.routeLayer refresh];
     
     [self.pinchView removeListView:self.directionsView];
     self.directionsView = nil;
@@ -766,7 +758,7 @@
     
     [self.routeLayer addGraphic:self.turnHighlightGraphic];
     
-    [self.routeLayer refresh];
+
 }
 
 #pragma mark -
@@ -816,7 +808,6 @@
     if(!_editingInspection)
     {
         [self.inspectionLayer removeGraphic:inspection.popup.graphic];
-        [self.inspectionLayer refresh];
     }
     
     _editingInspection = NO;
@@ -836,8 +827,6 @@
     [self.inspections addInspection:inspection];
     [self.inspectionsView reloadData];
     
-    //graphic has been added already.. just need to make sure it's drawn
-    [self.inspectionLayer refresh];
     
     self.inpsectionPinnedView   = nil;
     self.inspectionView         = nil;
@@ -1040,7 +1029,6 @@
 {
     [self.route removeAllStops];
     [self.stopsLayer removeAllGraphics];
-    [self.stopsLayer refresh];
     
     //update appropriate views
     [self.stopsView reloadData];
@@ -1077,7 +1065,6 @@
     }
     
     //update appropriate views
-    [self.stopsLayer refresh];
     [self.stopsView reloadData];
     
     //
@@ -1155,12 +1142,13 @@
 
 - (void)startAutoNav {
     // set our default mode to always keep us centered
+    self.mapView.locationDisplay.autoPanMode = AGSLocationDisplayAutoPanModeDefault;
     [self.mapView.locationDisplay startDataSource];
 }
 
 - (void)endAutoNav {
     // rotate our map back to 0 degrees
-    [self.mapView setRotationAngle:0 animated:YES];    
+    [self.mapView setRotationAngle:0 animated:YES];
     [self.mapView.locationDisplay stopDataSource];
 }
 
@@ -1172,17 +1160,15 @@
     
     AGSPictureMarkerSymbol *pms = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImage:[UIImage imageNamed:@"StopSymbol.png"]];
     pms.size = CGSizeMake(160.0f, 67.0f);
-    pms.offset = CGPointMake(63.0f, 0.0f);
-    
+    pms.offset = CGPointMake(63,0);
     [cs addSymbol:pms];
     
     AGSTextSymbol *ts = [AGSTextSymbol textSymbolWithText:name color:[UIColor blackColor]];
-    
     ts.vAlignment = AGSTextSymbolVAlignmentMiddle;
     ts.hAlignment = AGSTextSymbolHAlignmentCenter;
     ts.fontSize = 12.0f;
     ts.fontFamily = @"Courier";
-    ts.offset = CGPointMake(74.0f, -14.0f);    
+    ts.offset = CGPointMake(74,-14);
     [cs addSymbol:ts];
     
     AGSPoint *stopPoint = [[geom getLocationPoint] copy];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C05739915992ED800A4A3B0 /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C05739815992ED800A4A3B0 /* ArcGIS.bundle */; };
 		2CB6A7941598D2E500126395 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CB6A7931598D2E300126395 /* README.txt */; };
 		4B116EFF15105D9100935853 /* WISignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B116EFE15105D9100935853 /* WISignatureView.m */; };
 		4B73F2921513E05C007D44FC /* WISimpleCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B73F2911513E05C007D44FC /* WISimpleCSVParser.m */; };
@@ -103,11 +104,12 @@
 		78E59F341516658C006F86DA /* WIDomainPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E59F331516658C006F86DA /* WIDomainPickerView.m */; };
 		78EF78DB151A4F3C00D9212C /* WISignHereCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EF78DA151A4F3C00D9212C /* WISignHereCalloutView.m */; };
 		884B14B115E3F1AA0030A2ED /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 884B14B015E3F1AA0030A2ED /* Reachability.m */; };
-		8868EB661677D04B0036A0DA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8868EB651677D04B0036A0DA /* OpenGLES.framework */; };
-		8868EB681677D63B0036A0DA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8868EB671677D63B0036A0DA /* libc++.dylib */; };
+		9755BA54167EB82900518E4D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9755BA53167EB82900518E4D /* libc++.dylib */; };
+		9755BA56167EB82F00518E4D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9755BA55167EB82F00518E4D /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C05739815992ED800A4A3B0 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = "$HOME/Library/SDKs/ArcGIS/iOS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle"; sourceTree = "<absolute>"; };
 		2CB6A7931598D2E300126395 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = README.txt; sourceTree = "<group>"; };
 		4B116EFD15105D9100935853 /* WISignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WISignatureView.h; sourceTree = "<group>"; };
 		4B116EFE15105D9100935853 /* WISignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISignatureView.m; sourceTree = "<group>"; };
@@ -210,7 +212,6 @@
 		78B3CD47150A72AB007CA9EC /* cork_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cork_background.png; sourceTree = "<group>"; };
 		78B3CD4A150A78B9007CA9EC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		78B3CD4B150A78B9007CA9EC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		78B3CD4C150A78B9007CA9EC /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		78B3CD4D150A78B9007CA9EC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		78B3CD4E150A78B9007CA9EC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		78B3CD4F150A78B9007CA9EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -254,8 +255,8 @@
 		78EF78DA151A4F3C00D9212C /* WISignHereCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISignHereCalloutView.m; sourceTree = "<group>"; };
 		884B14AF15E3F1AA0030A2ED /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = "<group>"; };
 		884B14B015E3F1AA0030A2ED /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
-		8868EB651677D04B0036A0DA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		8868EB671677D63B0036A0DA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		9755BA53167EB82900518E4D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		9755BA55167EB82F00518E4D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,8 +264,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8868EB681677D63B0036A0DA /* libc++.dylib in Frameworks */,
-				8868EB661677D04B0036A0DA /* OpenGLES.framework in Frameworks */,
+				9755BA56167EB82F00518E4D /* OpenGLES.framework in Frameworks */,
+				9755BA54167EB82900518E4D /* libc++.dylib in Frameworks */,
 				78B3CD5B150A78F2007CA9EC /* libz.dylib in Frameworks */,
 				4BD09212151AE5E10049E744 /* libiconv.dylib in Frameworks */,
 				4BD09214151AE65D0049E744 /* AddressBookUI.framework in Frameworks */,
@@ -402,9 +403,8 @@
 		78B3CD0B150A6E51007CA9EC = {
 			isa = PBXGroup;
 			children = (
-				8868EB671677D63B0036A0DA /* libc++.dylib */,
-				8868EB651677D04B0036A0DA /* OpenGLES.framework */,
 				2CB6A7931598D2E300126395 /* README.txt */,
+				2C05739815992ED800A4A3B0 /* ArcGIS.bundle */,
 				78B3CD20150A6E51007CA9EC /* Westerville_Inspection */,
 				78B3CD19150A6E51007CA9EC /* Frameworks */,
 				78B3CD17150A6E51007CA9EC /* Products */,
@@ -422,9 +422,10 @@
 		78B3CD19150A6E51007CA9EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9755BA55167EB82F00518E4D /* OpenGLES.framework */,
+				9755BA53167EB82900518E4D /* libc++.dylib */,
 				4BD09211151AE5E10049E744 /* libiconv.dylib */,
 				78B3CD5A150A78F2007CA9EC /* libz.dylib */,
-				78B3CD4C150A78B9007CA9EC /* libstdc++.dylib */,
 				78B3CD8A150AB710007CA9EC /* AddressBook.framework */,
 				4BD09213151AE65D0049E744 /* AddressBookUI.framework */,
 				4BD09209151AE5AF0049E744 /* AudioToolbox.framework */,
@@ -721,6 +722,7 @@
 				7870BA1B151E50320085A783 /* download_button.png in Resources */,
 				7866FDC5152E13C300753ADB /* sample.csv in Resources */,
 				2CB6A7941598D2E500126395 /* README.txt in Resources */,
+				2C05739915992ED800A4A3B0 /* ArcGIS.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +821,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -842,6 +845,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -852,12 +856,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$HOME/Library/SDKs/**";
+				FRAMEWORK_SEARCH_PATHS = "$HOME/Library/SDKs/ArcGIS/iOS/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Westerville_Inspection/Westerville_Inspection-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$HOME/Library/SDKs/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Westerville_Inspection/Westerville_Inspection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -877,12 +881,12 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$HOME/Library/SDKs/**";
+				FRAMEWORK_SEARCH_PATHS = "$HOME/Library/SDKs/ArcGIS/iOS/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Westerville_Inspection/Westerville_Inspection-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$HOME/Library/SDKs/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Westerville_Inspection/Westerville_Inspection-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

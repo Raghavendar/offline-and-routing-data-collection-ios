@@ -27,7 +27,7 @@
 }
 
 
-////Custom override. Adds shadow to the symbol to make it look like there is some depth over the map
+//Custom override. Adds shadow to the symbol to make it look like there is some depth over the map
 //- (void)applySymbolToContext:(CGContextRef)context withGraphic:(AGSGraphic*)graphic{
 //	
 //    [super applySymbolToContext:context withGraphic:graphic];
