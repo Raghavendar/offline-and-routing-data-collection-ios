@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C05739915992ED800A4A3B0 /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2C05739815992ED800A4A3B0 /* ArcGIS.bundle */; };
 		2CB6A7941598D2E500126395 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CB6A7931598D2E300126395 /* README.txt */; };
 		4B116EFF15105D9100935853 /* WISignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B116EFE15105D9100935853 /* WISignatureView.m */; };
 		4B73F2921513E05C007D44FC /* WISimpleCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B73F2911513E05C007D44FC /* WISimpleCSVParser.m */; };
@@ -77,7 +76,6 @@
 		78B3CD49150A72AB007CA9EC /* cork_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B3CD47150A72AB007CA9EC /* cork_background.png */; };
 		78B3CD52150A78B9007CA9EC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B3CD4A150A78B9007CA9EC /* CoreLocation.framework */; };
 		78B3CD53150A78B9007CA9EC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B3CD4B150A78B9007CA9EC /* CoreText.framework */; };
-		78B3CD54150A78B9007CA9EC /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B3CD4C150A78B9007CA9EC /* libstdc++.dylib */; };
 		78B3CD55150A78B9007CA9EC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B3CD4D150A78B9007CA9EC /* MediaPlayer.framework */; };
 		78B3CD56150A78B9007CA9EC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B3CD4E150A78B9007CA9EC /* MobileCoreServices.framework */; };
 		78B3CD57150A78B9007CA9EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B3CD4F150A78B9007CA9EC /* QuartzCore.framework */; };
@@ -105,10 +103,11 @@
 		78E59F341516658C006F86DA /* WIDomainPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E59F331516658C006F86DA /* WIDomainPickerView.m */; };
 		78EF78DB151A4F3C00D9212C /* WISignHereCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EF78DA151A4F3C00D9212C /* WISignHereCalloutView.m */; };
 		884B14B115E3F1AA0030A2ED /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 884B14B015E3F1AA0030A2ED /* Reachability.m */; };
+		8868EB661677D04B0036A0DA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8868EB651677D04B0036A0DA /* OpenGLES.framework */; };
+		8868EB681677D63B0036A0DA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8868EB671677D63B0036A0DA /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C05739815992ED800A4A3B0 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = "~/Library/SDKs/ArcGIS/ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle"; sourceTree = "<absolute>"; };
 		2CB6A7931598D2E300126395 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = README.txt; sourceTree = "<group>"; };
 		4B116EFD15105D9100935853 /* WISignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WISignatureView.h; sourceTree = "<group>"; };
 		4B116EFE15105D9100935853 /* WISignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISignatureView.m; sourceTree = "<group>"; };
@@ -255,6 +254,8 @@
 		78EF78DA151A4F3C00D9212C /* WISignHereCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISignHereCalloutView.m; sourceTree = "<group>"; };
 		884B14AF15E3F1AA0030A2ED /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = "<group>"; };
 		884B14B015E3F1AA0030A2ED /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = "<group>"; };
+		8868EB651677D04B0036A0DA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8868EB671677D63B0036A0DA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,7 +263,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B3CD54150A78B9007CA9EC /* libstdc++.dylib in Frameworks */,
+				8868EB681677D63B0036A0DA /* libc++.dylib in Frameworks */,
+				8868EB661677D04B0036A0DA /* OpenGLES.framework in Frameworks */,
 				78B3CD5B150A78F2007CA9EC /* libz.dylib in Frameworks */,
 				4BD09212151AE5E10049E744 /* libiconv.dylib in Frameworks */,
 				4BD09214151AE65D0049E744 /* AddressBookUI.framework in Frameworks */,
@@ -400,8 +402,9 @@
 		78B3CD0B150A6E51007CA9EC = {
 			isa = PBXGroup;
 			children = (
+				8868EB671677D63B0036A0DA /* libc++.dylib */,
+				8868EB651677D04B0036A0DA /* OpenGLES.framework */,
 				2CB6A7931598D2E300126395 /* README.txt */,
-				2C05739815992ED800A4A3B0 /* ArcGIS.bundle */,
 				78B3CD20150A6E51007CA9EC /* Westerville_Inspection */,
 				78B3CD19150A6E51007CA9EC /* Frameworks */,
 				78B3CD17150A6E51007CA9EC /* Products */,
@@ -718,7 +721,6 @@
 				7870BA1B151E50320085A783 /* download_button.png in Resources */,
 				7866FDC5152E13C300753ADB /* sample.csv in Resources */,
 				2CB6A7941598D2E500126395 /* README.txt in Resources */,
-				2C05739915992ED800A4A3B0 /* ArcGIS.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@
 @synthesize onlineBasemaps  = _onlineBasemaps;
 @synthesize localBasemaps   = _localBasemaps;
 
-
+<li><a href="
 - (id)initWithOnlineBasemaps:(NSArray *)onlineBasemaps
 {
     self = [super init];

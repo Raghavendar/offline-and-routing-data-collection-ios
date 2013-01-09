@@ -27,16 +27,16 @@
 }
 
 
-//Custom override. Adds shadow to the symbol to make it look like there is some depth over the map
-- (void)applySymbolToContext:(CGContextRef)context withGraphic:(AGSGraphic*)graphic{
-	
-    [super applySymbolToContext:context withGraphic:graphic];
-    
-
-    CGColorRef shadowColor = [[[UIColor blackColor] colorWithAlphaComponent:0.8f] CGColor];   
-    
-    CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, CGSizeMake(3.0, 2.5), 1.5, shadowColor);
-}
+////Custom override. Adds shadow to the symbol to make it look like there is some depth over the map
+//- (void)applySymbolToContext:(CGContextRef)context withGraphic:(AGSGraphic*)graphic{
+//	
+//    [super applySymbolToContext:context withGraphic:graphic];
+//    
+//
+//    CGColorRef shadowColor = [[[UIColor blackColor] colorWithAlphaComponent:0.8f] CGColor];   
+//    
+//    CGContextSaveGState(context);
+//    CGContextSetShadowWithColor(context, CGSizeMake(3.0, 2.5), 1.5, shadowColor);
+//}
 
 @end

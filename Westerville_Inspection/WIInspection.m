@@ -91,14 +91,14 @@
         //Pre-populate inspection form with values from the feature being inspected. This example assumes that attributes
         //with the same names are of the same type and just assigns those blindly to the inspection. For a real
         //app, a more defensive approach would be nice here
-        NSArray *inspectionFieldNames = [self.popup.graphic.attributes allKeys];
-        NSArray *featureFieldNames = [self.feature.graphic.attributes allKeys];
+        NSArray *inspectionFieldNames = [self.popup.graphic.allAttributes allKeys];
+        NSArray *featureFieldNames = [self.feature.graphic.allAttributes allKeys];
         NSArray *offLimitsFieldNames = [NSArray arrayWithObjects:@"OBJECTID", @"GlobalID", nil];
         
         for (NSString *fieldName in featureFieldNames) {
             if ([inspectionFieldNames containsObject:fieldName] && ![offLimitsFieldNames containsObject:fieldName]) {
-                id featureValue = [self.feature.graphic.attributes objectForKey:fieldName];
-                [self.popup.graphic.attributes setObject:featureValue forKey:fieldName];
+                id featureValue = [self.feature.graphic.allAttributes objectForKey:fieldName];                
+                [self.popup.graphic setAttribute:featureValue forKey:fieldName];
             }
         }
         
@@ -108,7 +108,7 @@
             AGSField *field = [self.attributeUtility.fieldDictionary objectForKey:fi.fieldName];
             if ([self.attributeUtility isADateField:field]) {
                 NSNumber *dateNum = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970] * 1000.0];
-                [self.popup.graphic.attributes setObject:dateNum forKey:fi.fieldName];
+                [self.popup.graphic setAttribute:dateNum forKey:fi.fieldName];
             }
         }
 

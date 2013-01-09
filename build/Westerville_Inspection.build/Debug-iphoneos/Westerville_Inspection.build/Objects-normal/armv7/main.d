@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/main.m \
-  /Users/albe5259/Projects/ArcGIS-iOS-Routing-Offline-Inspections-DevSummit-2012/Westerville_Inspection/WIAppDelegate.h
+  /Users/albe5259/Projects/GitHub_ArcGIS/offline-and-routing-data-collection-ios/Westerville_Inspection/main.m \
+  /Users/albe5259/Projects/GitHub_ArcGIS/offline-and-routing-data-collection-ios/Westerville_Inspection/WIAppDelegate.h
